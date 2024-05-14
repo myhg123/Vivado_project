@@ -6,7 +6,7 @@ module led_toggle (
     output led
 );
     wire w_button;
-
+    
     button U_Btn (
         .clk(clk),
         .in (button),
@@ -22,7 +22,12 @@ module led_toggle (
 
 endmodule
 
-
+module mux (
+    input a,
+    output b
+);
+    
+endmodule
 
 module led_FSM(
     input clk,
