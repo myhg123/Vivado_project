@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May  8 11:38:11 2024
+# Process ID: 18452
+# Current directory: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.runs/synth_1
+# Command line: vivado.exe -log Gates.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Gates.tcl
+# Log file: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.runs/synth_1/Gates.vds
+# Journal file: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Gates.tcl -notrace

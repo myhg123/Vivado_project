@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 14 15:42:30 2024
+# Process ID: 87115
+# Current directory: /home/hyoon/vivado_project/240514_FSM/240514_FSM.runs/impl_1
+# Command line: vivado -log led_toggle.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source led_toggle.tcl -notrace
+# Log file: /home/hyoon/vivado_project/240514_FSM/240514_FSM.runs/impl_1/led_toggle.vdi
+# Journal file: /home/hyoon/vivado_project/240514_FSM/240514_FSM.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source led_toggle.tcl -notrace
