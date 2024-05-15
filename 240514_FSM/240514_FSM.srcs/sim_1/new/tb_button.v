@@ -11,7 +11,7 @@ module tb_button ();
         .in (in),
         .out(out)
     );
-
+    always #5 clk = ~clk;
     initial begin
         clk = 1'b0;
         in = 1'b1;

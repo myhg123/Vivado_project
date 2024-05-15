@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench

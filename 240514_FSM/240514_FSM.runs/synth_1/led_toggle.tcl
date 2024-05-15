@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/hyoon/vivado_project/240514_FSM/240514_FSM.runs/synth_1/led_toggle.tcl"
+  variable script "/home/yonn/vivado_project/240514_FSM/240514_FSM.runs/synth_1/led_toggle.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-82484-DESKTOP-7CFQ9ND/incrSyn
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-726-DESKTOP-7CFQ9ND/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -79,18 +81,17 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/hyoon/vivado_project/240514_FSM/240514_FSM.cache/wt [current_project]
-set_property parent.project_path /home/hyoon/vivado_project/240514_FSM/240514_FSM.xpr [current_project]
+set_property webtalk.parent_dir /home/yonn/vivado_project/240514_FSM/240514_FSM.cache/wt [current_project]
+set_property parent.project_path /home/yonn/vivado_project/240514_FSM/240514_FSM.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo /home/hyoon/vivado_project/240514_FSM/240514_FSM.cache/ip [current_project]
+set_property ip_output_repo /home/yonn/vivado_project/240514_FSM/240514_FSM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/hyoon/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/button.v
-  /home/hyoon/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/ledToggle.v
+  /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/button.v
+  /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/ledToggle.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,8 +102,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/hyoon/vivado_project/240514_FSM/240514_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc
-set_property used_in_implementation false [get_files /home/hyoon/vivado_project/240514_FSM/240514_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+read_xdc /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc
+set_property used_in_implementation false [get_files /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

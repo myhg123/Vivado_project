@@ -1,0 +1,1020 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May 15 18:08:30 2024
+# Process ID: 1054
+# Current directory: /home/yonn/vivado_project
+# Command line: vivado
+# Log file: /home/yonn/vivado_project/vivado.log
+# Journal file: /home/yonn/vivado_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/yonn/vivado_project/240514_FSM/240514_FSM.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/yonn/vivado_project/240514_FSM/240514_FSM.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/yonn/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+close_project
+open_project /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/yonn/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/button.v] -no_script -reset -force -quiet
+remove_files  /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/button.v
+import_files -norecurse /home/yonn/vivado_project/240514_FSM/240514_FSM.srcs/sources_1/new/button.v
+update_compile_order -fileset sources_1
+file mkdir /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v w ]
+add_files -fileset sim_1 /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:21]
+ERROR: [VRFC 10-3321] external reference 'HERZ' remains unresolved [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:21]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3321] external reference 'HERZ' remains unresolved [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:21]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clkDiv
+Compiling module xil_defaultlib.Upcounter_EN
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/xsim.dir/test_bench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed May 15 19:00:07 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_behav -key {Behavioral:sim_1:Functional:test_bench} -tclbatch {test_bench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source test_bench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7625.207 ; gain = 189.859 ; free physical = 4269 ; free virtual = 7984
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'out' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'out' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'out' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:32]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:29]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Upcounter_EN
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_behav -key {Behavioral:sim_1:Functional:test_bench} -tclbatch {test_bench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source test_bench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkDiv
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 14 for port 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:29]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Upcounter_EN
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+import_files -norecurse /home/yonn/vivado_project/20240510_10000counter/20240510_10000counter.srcs/sources_1/imports/new/fndController.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_behav -key {Behavioral:sim_1:Functional:test_bench} -tclbatch {test_bench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source test_bench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'reset' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:21]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'en' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:22]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'reset' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:21]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'en' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:22]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'reset' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:23]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'en' is not permitted [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_behav -key {Behavioral:sim_1:Functional:test_bench} -tclbatch {test_bench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source test_bench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_bench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module moduleName
+INFO: [VRFC 10-311] analyzing module stopWatch_FSM
+INFO: [VRFC 10-311] analyzing module clkDiv_Herz
+INFO: [VRFC 10-311] analyzing module Upcounter_EN
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim'
+xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3f18e9d59cc54c13a0c1ed2f46091d70 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.stopWatch_FSM
+Compiling module xil_defaultlib.test_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: stopWatch_module
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8033.402 ; gain = 0.000 ; free physical = 3583 ; free virtual = 7350
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'stopWatch_module' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:3]
+INFO: [Synth 8-6157] synthesizing module 'stopWatch_FSM' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:46]
+	Parameter STOP bound to: 2'b00 
+	Parameter RUN bound to: 2'b01 
+	Parameter RESET bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'button' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v:4]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'button' (1#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:79]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'stopWatch_FSM' (2#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:46]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv_Herz' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:105]
+	Parameter HERZ bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv_Herz' (3#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:105]
+INFO: [Synth 8-6157] synthesizing module 'Upcounter_EN' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:134]
+	Parameter MAX_NUM bound to: 10000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Upcounter_EN' (4#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:134]
+WARNING: [Synth 8-689] width (15) of port connection 'counter' does not match port width (14) of module 'Upcounter_EN' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:33]
+INFO: [Synth 8-6157] synthesizing module 'fndController' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:143]
+	Parameter MAX_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv' (5#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:143]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:127]
+	Parameter MAX_COUNT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (6#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:127]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (7#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-6157] synthesizing module 'digitSplitter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'digitSplitter' (8#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (9#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-6157] synthesizing module 'BCDtoSEG' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'BCDtoSEG' (10#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'fndController' (11#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:3]
+WARNING: [Synth 8-689] width (15) of port connection 'digit' does not match port width (14) of module 'fndController' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'stopWatch_module' (12#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8033.402 ; gain = 0.000 ; free physical = 3554 ; free virtual = 7328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8033.402 ; gain = 0.000 ; free physical = 3549 ; free virtual = 7324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8033.402 ; gain = 0.000 ; free physical = 3549 ; free virtual = 7324
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8033.402 ; gain = 0.000 ; free physical = 3541 ; free virtual = 7316
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+Finished Parsing XDC File [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8138.215 ; gain = 0.000 ; free physical = 3381 ; free virtual = 7169
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8287.383 ; gain = 253.980 ; free physical = 3242 ; free virtual = 7035
+32 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 8287.383 ; gain = 253.980 ; free physical = 3242 ; free virtual = 7035
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8311.953 ; gain = 0.000 ; free physical = 3240 ; free virtual = 7034
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'stopWatch_module' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:3]
+INFO: [Synth 8-6157] synthesizing module 'stopWatch_FSM' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:46]
+	Parameter STOP bound to: 2'b00 
+	Parameter RUN bound to: 2'b01 
+	Parameter RESET bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'button' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v:4]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'button' (1#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/button.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:79]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'stopWatch_FSM' (2#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:46]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv_Herz' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:105]
+	Parameter HERZ bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv_Herz' (3#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:105]
+INFO: [Synth 8-6157] synthesizing module 'Upcounter_EN' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:134]
+	Parameter MAX_NUM bound to: 10000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Upcounter_EN' (4#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:134]
+WARNING: [Synth 8-689] width (15) of port connection 'counter' does not match port width (14) of module 'Upcounter_EN' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:33]
+INFO: [Synth 8-6157] synthesizing module 'fndController' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:143]
+	Parameter MAX_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv' (5#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:143]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:127]
+	Parameter MAX_COUNT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (6#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:127]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (7#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-6157] synthesizing module 'digitSplitter' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'digitSplitter' (8#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (9#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-6157] synthesizing module 'BCDtoSEG' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'BCDtoSEG' (10#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'fndController' (11#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/imports/new/fndController.v:3]
+WARNING: [Synth 8-689] width (15) of port connection 'digit' does not match port width (14) of module 'fndController' [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'stopWatch_module' (12#1) [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/sources_1/new/Upcounter_EN.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8341.945 ; gain = 29.992 ; free physical = 3303 ; free virtual = 7097
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8347.883 ; gain = 35.930 ; free physical = 3304 ; free virtual = 7098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8347.883 ; gain = 35.930 ; free physical = 3304 ; free virtual = 7098
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8354.887 ; gain = 0.000 ; free physical = 3397 ; free virtual = 7191
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+Finished Parsing XDC File [/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+Completed Processing XDC Constraints
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed May 15 20:43:24 2024] Launched synth_1...
+Run output will be captured here: /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.runs/synth_1/runme.log
+[Wed May 15 20:43:24 2024] Launched impl_1...
+Run output will be captured here: /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 09:50:49
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-06:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B820DAA
+set_property PROGRAM.FILE {/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.runs/impl_1/stopWatch_module.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.runs/impl_1/stopWatch_module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

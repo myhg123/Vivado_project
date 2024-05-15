@@ -5,8 +5,8 @@
 
 
 ## Clock signal
-#set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_34 ,Sch=CLK100MHZ
-#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_34 ,Sch=CLK100MHZ
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
 
 
 ## Switches
@@ -51,26 +51,26 @@
 
 ##7 segment display
 
-#set_property -dict { PACKAGE_PIN W7  IOSTANDARD LVCMOS33 } [get_ports { seg[0] }]; #IO_L13P_T2_MRCC_34 ,Sch=CA
-#set_property -dict { PACKAGE_PIN W6  IOSTANDARD LVCMOS33 } [get_ports { seg[1] }]; #IO_L13N_T2_MRCC_34 ,Sch=CB
-#set_property -dict { PACKAGE_PIN U8  IOSTANDARD LVCMOS33 } [get_ports { seg[2] }]; #IO_L14P_T2_SRCC_34 ,Sch=CC
-#set_property -dict { PACKAGE_PIN V8  IOSTANDARD LVCMOS33 } [get_ports { seg[3] }]; #IO_L14N_T2_SRCC_34 ,Sch=CD
-#set_property -dict { PACKAGE_PIN U5  IOSTANDARD LVCMOS33 } [get_ports { seg[4] }]; #IO_L16P_T2_34      ,Sch=CE
-#set_property -dict { PACKAGE_PIN V5  IOSTANDARD LVCMOS33 } [get_ports { seg[5] }]; #IO_L16N_T2_34      ,Sch=CF
-#set_property -dict { PACKAGE_PIN U7  IOSTANDARD LVCMOS33 } [get_ports { seg[6] }]; #IO_L19P_T3_34      ,Sch=CG
-#set_property -dict { PACKAGE_PIN V7  IOSTANDARD LVCMOS33 } [get_ports { seg[7] }]; #IO_L19N_T3_VREF_34 ,Sch=DP
+set_property -dict { PACKAGE_PIN W7  IOSTANDARD LVCMOS33 } [get_ports { fndFont[0] }]; #IO_L13P_T2_MRCC_34 ,Sch=CA
+set_property -dict { PACKAGE_PIN W6  IOSTANDARD LVCMOS33 } [get_ports { fndFont[1] }]; #IO_L13N_T2_MRCC_34 ,Sch=CB
+set_property -dict { PACKAGE_PIN U8  IOSTANDARD LVCMOS33 } [get_ports { fndFont[2] }]; #IO_L14P_T2_SRCC_34 ,Sch=CC
+set_property -dict { PACKAGE_PIN V8  IOSTANDARD LVCMOS33 } [get_ports { fndFont[3] }]; #IO_L14N_T2_SRCC_34 ,Sch=CD
+set_property -dict { PACKAGE_PIN U5  IOSTANDARD LVCMOS33 } [get_ports { fndFont[4] }]; #IO_L16P_T2_34      ,Sch=CE
+set_property -dict { PACKAGE_PIN V5  IOSTANDARD LVCMOS33 } [get_ports { fndFont[5] }]; #IO_L16N_T2_34      ,Sch=CF
+set_property -dict { PACKAGE_PIN U7  IOSTANDARD LVCMOS33 } [get_ports { fndFont[6] }]; #IO_L19P_T3_34      ,Sch=CG
+set_property -dict { PACKAGE_PIN V7  IOSTANDARD LVCMOS33 } [get_ports { fndFont[7] }]; #IO_L19N_T3_VREF_34 ,Sch=DP
 
-#set_property -dict { PACKAGE_PIN U2  IOSTANDARD LVCMOS33 } [get_ports { an[0]  }]; #IO_L9N_T1_DQS_34   ,Sch=DP
-#set_property -dict { PACKAGE_PIN U4  IOSTANDARD LVCMOS33 } [get_ports { an[1]  }]; #IO_L11P_T1_SRCC_34 ,Sch=DP
-#set_property -dict { PACKAGE_PIN V4  IOSTANDARD LVCMOS33 } [get_ports { an[2]  }]; #IO_L11N_T1_SRCC_34 ,Sch=DP
-#set_property -dict { PACKAGE_PIN W4  IOSTANDARD LVCMOS33 } [get_ports { an[3]  }]; #IO_L12N_T1_MRCC_34 ,Sch=DP
+set_property -dict { PACKAGE_PIN U2  IOSTANDARD LVCMOS33 } [get_ports { fndCom[0]  }]; #IO_L9N_T1_DQS_34   ,Sch=DP
+set_property -dict { PACKAGE_PIN U4  IOSTANDARD LVCMOS33 } [get_ports { fndCom[1]  }]; #IO_L11P_T1_SRCC_34 ,Sch=DP
+set_property -dict { PACKAGE_PIN V4  IOSTANDARD LVCMOS33 } [get_ports { fndCom[2]  }]; #IO_L11N_T1_SRCC_34 ,Sch=DP
+set_property -dict { PACKAGE_PIN W4  IOSTANDARD LVCMOS33 } [get_ports { fndCom[3]  }]; #IO_L12N_T1_MRCC_34 ,Sch=DP
 
 
 ##Buttons
 
-#set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { btnC }]; #IO_L18N_T2_A11_D27_14 ,Sch=BTNC
-#set_property -dict { PACKAGE_PIN T18  IOSTANDARD LVCMOS33 } [get_ports { btnU }]; #IO_L17N_T2_A13_D29_14 ,Sch=BTNU
-#set_property -dict { PACKAGE_PIN W19  IOSTANDARD LVCMOS33 } [get_ports { btnL }]; #IO_L16N_T2_A15_D31_14 ,Sch=BTNL
+set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { btn1 }]; #IO_L18N_T2_A11_D27_14 ,Sch=BTNC
+set_property -dict { PACKAGE_PIN T18  IOSTANDARD LVCMOS33 } [get_ports { btn2 }]; #IO_L17N_T2_A13_D29_14 ,Sch=BTNU
+set_property -dict { PACKAGE_PIN W19  IOSTANDARD LVCMOS33 } [get_ports { reset}]; #IO_L16N_T2_A15_D31_14 ,Sch=BTNL
 #set_property -dict { PACKAGE_PIN T17  IOSTANDARD LVCMOS33 } [get_ports { btnR }]; #IO_L17P_T2_A14_D30_14 ,Sch=BTNR
 #set_property -dict { PACKAGE_PIN U17  IOSTANDARD LVCMOS33 } [get_ports { btnD }]; #IO_L18P_T2_A12_D28_14 ,Sch=BTND
 

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May 15 19:00:06 2024
+# Process ID: 15417
+# Current directory: /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/xsim.dir/test_bench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/yonn/vivado_project/240514_Upcounter_FSM/240514_Upcounter_FSM.sim/sim_1/behav/xsim/xsim.dir/test_bench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed May 15 19:00:07 2024...
