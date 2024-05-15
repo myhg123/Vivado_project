@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu May  9 17:25:40 2024
+# Process ID: 16160
+# Current directory: C:/Users/kccistc/Desktop/Verilog_Project/20240509_4bit_FullAdder/20240509_4bit_FullAdder.runs/impl_1
+# Command line: vivado.exe -log Adder_Fnd.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Adder_Fnd.tcl -notrace
+# Log file: C:/Users/kccistc/Desktop/Verilog_Project/20240509_4bit_FullAdder/20240509_4bit_FullAdder.runs/impl_1/Adder_Fnd.vdi
+# Journal file: C:/Users/kccistc/Desktop/Verilog_Project/20240509_4bit_FullAdder/20240509_4bit_FullAdder.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Adder_Fnd.tcl -notrace
