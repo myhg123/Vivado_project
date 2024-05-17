@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Thu May 16 17:05:25 2024
+| Date             : Fri May 17 10:45:25 2024
 | Host             : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file uart_test_power_routed.rpt -pb uart_test_power_summary_routed.pb -rpx uart_test_power_routed.rpx
 | Design           : uart_test
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.073        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.002        |
+| Dynamic (W)              | 0.001        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       65 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       19 |     20800 |            0.09 |
-|   Register     |    <0.001 |       30 |     41600 |            0.07 |
+| Slice Logic    |    <0.001 |       60 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       17 |     20800 |            0.08 |
+|   Register     |    <0.001 |       28 |     41600 |            0.07 |
 |   CARRY4       |    <0.001 |        4 |      8150 |            0.05 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       55 |       --- |             --- |
+| Signals        |    <0.001 |       52 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       106 |            3.77 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.073 |          |           |                 |
@@ -137,10 +137,8 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------+-----------+
-| Name      | Power (W) |
-+-----------+-----------+
-| uart_test |     0.002 |
-+-----------+-----------+
++------+-----------+
+| Name | Power (W) |
++------+-----------+
 
 

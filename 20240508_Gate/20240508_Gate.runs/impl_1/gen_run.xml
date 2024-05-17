@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-3" LaunchTime="1715135948">
-  <File Type="ROUTE-PWR" Name="Gates_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="Gates.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="Gates_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="Gates_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="Gates.msk"/>
-  <File Type="ROUTE-CLK" Name="Gates_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="Gates.vdi"/>
-  <File Type="BG-BIT" Name="Gates.bit"/>
-  <File Type="BG-DRC" Name="Gates.drc"/>
-  <File Type="BG-BGN" Name="Gates.bgn"/>
-  <File Type="BG-BIN" Name="Gates.bin"/>
-  <File Type="BITSTR-RBT" Name="Gates.rbt"/>
-  <File Type="BITSTR-NKY" Name="Gates.nky"/>
-  <File Type="BITSTR-BMM" Name="Gates_bd.bmm"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Gates_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MMI" Name="Gates.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Gates_methodology_drc_routed.pb"/>
-  <File Type="BITSTR-SYSDEF" Name="Gates.sysdef"/>
+  <File Type="CFI_FILE" Name="Gates.cfi"/>
+  <File Type="RCFI_FILE" Name="Gates.rcfi"/>
+  <File Type="PDI-FILE" Name="Gates.pdi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Gates_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-RPX" Name="Gates_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Gates_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Gates_methodology_drc_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Gates_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Gates_postroute_physopt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Gates_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Gates_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="Gates_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="Gates_placed.dcp"/>
+  <File Type="OPT-DCP" Name="Gates_opt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Gates_bus_skew_routed.rpt"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="Gates.ltx"/>
-  <File Type="RCFI_FILE" Name="Gates.rcfi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="Gates.sysdef"/>
+  <File Type="BITSTR-MMI" Name="Gates.mmi"/>
+  <File Type="BITSTR-BMM" Name="Gates_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="Gates_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-NKY" Name="Gates.nky"/>
+  <File Type="BITSTR-RBT" Name="Gates.rbt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Gates_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="Gates_reports.tcl"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Gates_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-MSK" Name="Gates.msk"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Gates_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="Gates.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="Gates_timing_summary_routed.pb"/>
   <File Type="OPT-DRC" Name="Gates_drc_opted.rpt"/>
+  <File Type="RBD_FILE" Name="Gates.rbd"/>
+  <File Type="BG-BIN" Name="Gates.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Gates_timing_summary_routed.rpt"/>
+  <File Type="NPI_FILE" Name="Gates.npi"/>
+  <File Type="BG-BGN" Name="Gates.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Gates_routed_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="Gates.vdi"/>
+  <File Type="RNPI_FILE" Name="Gates.rnpi"/>
+  <File Type="BG-DRC" Name="Gates.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Gates_routed_error.dcp"/>
+  <File Type="BG-BIT" Name="Gates.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="Gates_route_status.pb"/>
   <File Type="OPT-HWDEF" Name="Gates.hwdef"/>
   <File Type="PLACE-IO" Name="Gates_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Gates_utilization_placed.rpt"/>
@@ -32,31 +52,11 @@
   <File Type="PLACE-PRE-SIMILARITY" Name="Gates_incremental_reuse_pre_placed.rpt"/>
   <File Type="ROUTE-DRC" Name="Gates_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Gates_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Gates_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Gates_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Gates_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Gates_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Gates_route_status.pb"/>
   <File Type="ROUTE-DCP" Name="Gates_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Gates_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Gates_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Gates_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="Gates_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Gates_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Gates_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Gates_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Gates_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="Gates_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="Gates_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="Gates_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Gates_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Gates_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Gates_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Gates_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Gates_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="Gates.pdi"/>
-  <File Type="CFI_FILE" Name="Gates.cfi"/>
-  <File Type="RNPI_FILE" Name="Gates.rnpi"/>
-  <File Type="NPI_FILE" Name="Gates.npi"/>
-  <File Type="RBD_FILE" Name="Gates.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Gates.v">

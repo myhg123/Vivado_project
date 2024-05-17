@@ -29,8 +29,8 @@ module tb_UART ();
     end
 
     initial begin
-        #20 reset = 1'b0;
-        #20 tx_data = 8'haf;
+        #100 reset = 1'b0;
+        #100 tx_data = 8'b11001111;
         start = 1'b1;
         #10 start = 1'b0;
     end

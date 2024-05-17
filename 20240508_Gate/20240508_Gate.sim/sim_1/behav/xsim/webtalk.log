@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Webtalk v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed May  8 15:19:05 2024
-# Process ID: 2056
-# Current directory: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/xsim.dir/tb_gates_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Fri May 17 19:48:19 2024
+# Process ID: 5951
+# Current directory: /home/yonn/vivado_project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/yonn/vivado_project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/xsim.dir/tb_gates_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/yonn/vivado_project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/yonn/vivado_project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/kccistc/Desktop/Verilog_Project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/xsim.dir/tb_gates_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed May  8 15:19:05 2024...
+source /home/yonn/vivado_project/20240508_Gate/20240508_Gate.sim/sim_1/behav/xsim/xsim.dir/tb_gates_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri May 17 19:48:20 2024...

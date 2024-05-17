@@ -50,8 +50,8 @@ module baudrate_generator (
 
     always @(*) begin
         counter_next = counter_reg;
-        if (counter_reg == 10 - 1) begin
-        // if (counter_reg == 100_000_000 / 9600 - 1) begin
+      //  if (counter_reg == 10 - 1) begin
+             if (counter_reg == 100_000_000 / 9600 - 1) begin
             counter_next = 0;
             tick_next = 1'b1;
         end else begin
@@ -108,8 +108,7 @@ module Transmitter_Repeat (
                     if (tx_dataTxDone_reg == 1'b1) begin
                         tx_dataTxDone_reg = 1'b0;
                         state_next = STOP;
-                    end 
-                    else state_next = state;
+                    end else state_next = state;
                 end
             end
             STOP:  if (br_tick) state_next = IDLE;
@@ -127,12 +126,14 @@ module Transmitter_Repeat (
                 r_data  = data;
             end
             DATATX: begin
-                if (index == 3'D7) begin
-                   index = 3'd0;
-                   tx_dataTxDone_reg = 1'b1; 
-                end else begin
-                    tx_next = r_data[index];
-                    index = index + 1;
+                if (br_tick) begin
+                    if (index == 3'D7) begin
+                        index = 3'd0;
+                        tx_dataTxDone_reg = 1'b1;
+                    end else begin
+                        tx_next = r_data[index];
+                        index   = index + 1;
+                    end
                 end
             end
             STOP: begin
