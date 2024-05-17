@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240516_UART/20240516_UART.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+/home/yonn/vivado_project/20240516_UART/20240516_UART.srcs/sim_1/new/tb_UART.v,1715844464,verilog,,,,tb_UART,,,,,,,,
+/home/yonn/vivado_project/20240516_UART/20240516_UART.srcs/sources_1/new/Transmitter.v,1715905783,verilog,,/home/yonn/vivado_project/20240516_UART/20240516_UART.srcs/sim_1/new/tb_UART.v,,Transmitter;Transmitter_Repeat;Transmitter_class;baudrate_generator;uart,,,,,,,,
