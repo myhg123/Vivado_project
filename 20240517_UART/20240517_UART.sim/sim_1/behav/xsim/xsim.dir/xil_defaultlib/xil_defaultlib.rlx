@@ -2,6 +2,7 @@
 2020.2
 Nov 18 2020
 09:20:35
-/home/yonn/vivado_project/20240517_UART/20240517_UART.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sim_1/imports/new/tb_UART.v,1715910806,verilog,,,,tb_UART,,,,,,,,
-/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v,1715910901,verilog,,/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sim_1/imports/new/tb_UART.v,,baudrate_generator;transmitter;uart,,,,,,,,
+/home/yonn/vivado_project/20240517_UART/20240517_UART.sim/sim_1/behav/xsim/glbl.v,1715998248,verilog,,,,glbl,,,,,,,,
+/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sim_1/imports/new/tb_UART.v,1716017312,verilog,,,,tb_UART,,,,,,,,
+/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/top.v,1716024829,verilog,,/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v,,echoProgram;top,,,,,,,,
+/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v,1716024533,verilog,,/home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sim_1/imports/new/tb_UART.v,,Receiver;baudrate_generator;baudrate_generator_startSignal;transmitter;uart;uart_RX;uart_TX,,,,,,,,

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Fri May 17 13:04:17 2024
+| Date             : Sat May 18 18:24:06 2024
 | Host             : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      148 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       34 |     20800 |            0.16 |
-|   Register     |    <0.001 |       94 |     41600 |            0.23 |
-|   CARRY4       |    <0.001 |        4 |      8150 |            0.05 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |      129 |       --- |             --- |
+| Slice Logic    |    <0.001 |      145 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       44 |     20800 |            0.21 |
+|   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
+|   Register     |    <0.001 |       61 |     41600 |            0.15 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |      113 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       106 |            3.77 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.073 |          |           |                 |

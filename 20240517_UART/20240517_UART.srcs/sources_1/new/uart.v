@@ -6,6 +6,86 @@ module uart (
     input reset,
     input tx_start,
     input [7:0] tx_data,
+    input RX,
+
+    output [7:0] rx_data,
+    output rx_done,
+    output tx,
+    output tx_done
+);
+    wire w_br_tick;
+    baudrate_generator U_BR_Gen (
+        .clk(clk),
+        .reset(reset),
+        .br_tick(w_br_tick)
+    );
+
+    transmitter U_TxD (
+        .clk(clk),
+        .reset(reset),
+        .br_tick(w_br_tick),
+        .tx_start(tx_start),
+        .tx_data(tx_data),
+        .tx(tx),
+        .tx_done(tx_done)
+    );
+    wire w_br_tick_sig;
+    wire w_br_start;
+    baudrate_generator_startSignal U_BR_Gen_sig (
+        .clk(clk),
+        .startSignal(w_br_start),
+        .reset(reset),
+        .br_tick(w_br_tick_sig)
+    );
+
+
+    Receiver U_Receiver (
+        .clk(clk),
+        .RX(RX),
+        .reset(reset),
+        .br_tick(w_br_tick_sig),
+        .RXdata(rx_data),
+        .br_start(w_br_start),
+        .RX_done(rx_done)
+
+    );
+
+endmodule
+
+module uart_RX (
+    input clk,
+    input reset,
+    input RX,
+
+    output [7:0] rx_data,
+    output rx_done
+);
+    wire w_br_tick_sig;
+    baudrate_generator U_BR_Gen_sig (
+        .clk(clk),
+        .reset(reset),
+        .br_tick(w_br_tick_sig)
+    );
+
+
+    Receiver U_Receiver (
+        .clk(clk),
+        .RX(RX),
+        .reset(reset),
+        .br_tick(w_br_tick_sig),
+        .RXdata(rx_data),
+ //       .br_start(w_br_start),
+        .RX_done(rx_done)
+
+    );
+
+endmodule
+module uart_TX (
+    input clk,
+    input reset,
+    input tx_start,
+    input [7:0] tx_data,
+
     output tx,
     output tx_done
 );
@@ -26,6 +106,7 @@ module uart (
         .tx_done(tx_done)
     );
 
+ 
 endmodule
 
 module baudrate_generator (
@@ -94,6 +175,9 @@ module baudrate_generator_startSignal (
                 counter_next = counter_reg + 1;
                 tick_next = 1'b0;
             end
+        end else begin
+            counter_next = 0;
+            tick_next = 0;
         end
     end
 
@@ -109,7 +193,7 @@ module transmitter (
     output tx_done
 );
 
-    localparam IDLE = 0, START = 1, DATA = 2, STOP = 3;
+    localparam IDLE = 0, START = 1, DATA = 3, STOP = 2;
 
     reg [1:0] state, state_next;
     reg [7:0] tx_data_reg, tx_data_next;
@@ -187,51 +271,70 @@ module Receiver (
     input reset,
     input br_tick,
     output [7:0] RXdata,
+    //output br_start,
     output RX_done
 
 );
 
-    localparam IDLE = 0, STARTBIT = 1, DATA = 2, STOP = 3;
+    localparam IDLE = 0, DATA = 1, STOP = 3;
 
     reg [1:0] state, state_next;
-    reg [7:0] rx_reg, rx_reg_next;
+    reg [7:0] rx_data_reg, rx_data_next;
     reg [2:0] bit_cnt_reg, bit_cnt_next;
     reg rx_done_reg, rx_done_next;
-
+ //   reg br_start_reg, br_start_next;
+    //output
+    assign RXdata   = rx_data_reg;
+    assign RX_done  = rx_done_reg;
+//    assign br_start = br_start_reg;
     //currunt state
     always @(posedge clk, posedge reset) begin
         if (reset) begin
             state <= IDLE;
-            rx_reg <= 8'd0;
+            rx_data_reg <= 8'd0;
             bit_cnt_reg <= 3'd0;
             rx_done_reg <= 1'b0;
+  //          br_start_reg <= 1'b0;
         end else begin
             state <= state_next;
-            rx_reg <= rx_reg_next;
-            bit_cnt_next <= bit_cnt_reg;
+            rx_data_reg <= rx_data_next;
+            bit_cnt_reg <= bit_cnt_next;
             rx_done_reg <= rx_done_next;
+    //        br_start_reg <= br_start_next;
         end
     end
 
     //next state
     always @(*) begin
-        state_next = state;
+        state_next   = state;
+        rx_done_next = 0;
+        rx_data_next = rx_data_reg;
+        bit_cnt_next = bit_cnt_reg;
         case (state)
             IDLE: begin
-                bit_cnt_next = 0;
-                rx_done_next = 0;
+                bit_cnt_next  = 0;
+                rx_done_next  = 0;
+//                br_start_next = 1'b0;
                 if (RX == 1'b0) begin
-                    state_next = STARTBIT;
+//                    br_start_next = 1'b1;
+                    state_next = DATA;
                 end
             end
-            STARTBIT: begin
-
-            end
             DATA: begin
-
+                if (br_tick) begin
+                    rx_data_next[bit_cnt_reg] = RX;
+                    if (bit_cnt_reg == 7) begin
+                        state_next = STOP;
+                    end else begin
+                        bit_cnt_next = bit_cnt_next + 1;
+                    end
+                end
             end
             STOP: begin
-
+                if (br_tick) begin
+                    rx_done_next = RX ? 1'b1 : 1'b0;
+                    state_next   = IDLE;
+                end
             end
         endcase
     end

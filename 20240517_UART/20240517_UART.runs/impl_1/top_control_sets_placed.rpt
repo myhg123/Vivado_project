@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri May 17 13:04:10 2024
+| Date         : Sat May 18 18:23:59 2024
 | Host         : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     3 |
-|    Minimum number of control sets                        |     3 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    18 |
+| Unused register locations in slices containing registers |    75 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     3 |
-| >= 0 to < 4        |     0 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     9 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              66 |           16 |
-| No           | No                    | Yes                    |              18 |            6 |
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |              41 |           11 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              10 |            2 |
+| Yes          | No                    | Yes                    |              19 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,12 +70,20 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  |            Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | U_UART/U_TxD/bit_cnt_reg[2]_i_1_n_0 | reset_IBUF       |                2 |             10 |         5.00 |
-|  clk_IBUF_BUFG |                                     | reset_IBUF       |                6 |             18 |         3.00 |
-|  clk_IBUF_BUFG |                                     |                  |               16 |             66 |         4.12 |
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
++------------------------------------------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
+|                     Clock Signal                     |                       Enable Signal                       | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  U_echoProgram/U_UART_RX/U_Receiver/br_start_next__0 |                                                           |                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[0]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[2]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[3]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[4]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[5]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[6]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[7]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_RX/U_Receiver/rx_data_reg[1]_i_1_n_0 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                       | U_echoProgram/U_UART_TX/U_TxD/bit_cnt_reg[2]_i_1_n_0      | reset_IBUF       |                2 |             11 |         5.50 |
+|  clk_IBUF_BUFG                                       |                                                           | reset_IBUF       |               11 |             41 |         3.73 |
++------------------------------------------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

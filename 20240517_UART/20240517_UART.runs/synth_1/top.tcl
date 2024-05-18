@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-676-DESKTOP-7CFQ9ND/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-276898-DESKTOP-7CFQ9ND/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -89,7 +89,6 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/imports/new/button.v
   /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v
   /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/top.v
 }
