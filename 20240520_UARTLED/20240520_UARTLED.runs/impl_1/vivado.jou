@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May 20 17:09:07 2024
+# Process ID: 228874
+# Current directory: /home/yonn/vivado_project/20240520_UARTLED/20240520_UARTLED.runs/impl_1
+# Command line: vivado -log uartWithLED.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uartWithLED.tcl -notrace
+# Log file: /home/yonn/vivado_project/20240520_UARTLED/20240520_UARTLED.runs/impl_1/uartWithLED.vdi
+# Journal file: /home/yonn/vivado_project/20240520_UARTLED/20240520_UARTLED.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source uartWithLED.tcl -notrace
