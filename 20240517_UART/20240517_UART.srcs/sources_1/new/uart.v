@@ -61,7 +61,7 @@ module uart_RX (
     output rx_done
 );
     wire w_br_tick_sig;
-    baudrate_generator U_BR_Gen_sig (
+    baudrate_generator U_BR_Gen (
         .clk(clk),
         .reset(reset),
         .br_tick(w_br_tick_sig)
@@ -74,7 +74,7 @@ module uart_RX (
         .reset(reset),
         .br_tick(w_br_tick_sig),
         .RXdata(rx_data),
- //       .br_start(w_br_start),
+        //       .br_start(w_br_start),
         .RX_done(rx_done)
 
     );
@@ -106,7 +106,7 @@ module uart_TX (
         .tx_done(tx_done)
     );
 
- 
+
 endmodule
 
 module baudrate_generator (
@@ -168,7 +168,7 @@ module baudrate_generator_startSignal (
         counter_next = counter_reg;
         if (startSignal) begin
             //if (counter_reg == 10 - 1) begin
-            if (counter_reg == 100_000_000 / 9600 - 1) begin
+                if (counter_reg == 100_000_000 / 9600 - 1) begin
                 counter_next = 0;
                 tick_next = 1'b1;
             end else begin
@@ -282,11 +282,11 @@ module Receiver (
     reg [7:0] rx_data_reg, rx_data_next;
     reg [2:0] bit_cnt_reg, bit_cnt_next;
     reg rx_done_reg, rx_done_next;
- //   reg br_start_reg, br_start_next;
+    //   reg br_start_reg, br_start_next;
     //output
-    assign RXdata   = rx_data_reg;
-    assign RX_done  = rx_done_reg;
-//    assign br_start = br_start_reg;
+    assign RXdata  = rx_data_reg;
+    assign RX_done = rx_done_reg;
+    //    assign br_start = br_start_reg;
     //currunt state
     always @(posedge clk, posedge reset) begin
         if (reset) begin
@@ -294,13 +294,13 @@ module Receiver (
             rx_data_reg <= 8'd0;
             bit_cnt_reg <= 3'd0;
             rx_done_reg <= 1'b0;
-  //          br_start_reg <= 1'b0;
+            //          br_start_reg <= 1'b0;
         end else begin
             state <= state_next;
             rx_data_reg <= rx_data_next;
             bit_cnt_reg <= bit_cnt_next;
             rx_done_reg <= rx_done_next;
-    //        br_start_reg <= br_start_next;
+            //        br_start_reg <= br_start_next;
         end
     end
 
@@ -312,12 +312,12 @@ module Receiver (
         bit_cnt_next = bit_cnt_reg;
         case (state)
             IDLE: begin
-                bit_cnt_next  = 0;
-                rx_done_next  = 0;
-//                br_start_next = 1'b0;
+                rx_done_next = 0;
+                //                br_start_next = 1'b0;
                 if (RX == 1'b0) begin
-//                    br_start_next = 1'b1;
-                    state_next = DATA;
+                    //                    br_start_next = 1'b1;
+                    bit_cnt_next = 0;
+                    state_next   = DATA;
                 end
             end
             DATA: begin

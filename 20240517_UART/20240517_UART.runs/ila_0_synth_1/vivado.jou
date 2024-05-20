@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 19 14:41:33 2024
+# Process ID: 84630
+# Current directory: /home/yonn/vivado_project/20240517_UART/20240517_UART.runs/ila_0_synth_1
+# Command line: vivado -log ila_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_0.tcl
+# Log file: /home/yonn/vivado_project/20240517_UART/20240517_UART.runs/ila_0_synth_1/ila_0.vds
+# Journal file: /home/yonn/vivado_project/20240517_UART/20240517_UART.runs/ila_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source ila_0.tcl -notrace
