@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240521_SV_adder/20240521_SV_adder.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+/home/yonn/vivado_project/20240521_SV_adder/20240521_SV_adder.srcs/sim_1/new/tb_adder.sv,1716277173,systemVerilog,,,,$unit_tb_adder_sv;adder_intf;tb_adder,,uvm,,,,,,
+/home/yonn/vivado_project/20240521_SV_adder/20240521_SV_adder.srcs/sources_1/new/adder.v,1716259310,verilog,,,,adder,,uvm,,,,,,

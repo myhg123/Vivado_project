@@ -1,0 +1,61 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+[GEN] a:31807, b:    x
+[DRV] a:31807, b:    x
+[MON] a:31807, b:31807
+[SCB] a:31807, b:31807
+  --> SAME!!! a:31807, b:31807
+[GEN] a:40792, b:    x
+[DRV] a:40792, b:    x
+[MON] a:40792, b:40792
+[SCB] a:40792, b:40792
+  --> SAME!!! a:40792, b:40792
+[GEN] a:33843, b:    x
+[DRV] a:33843, b:    x
+[MON] a:33843, b:33843
+[SCB] a:33843, b:33843
+  --> SAME!!! a:33843, b:33843
+[GEN] a:48181, b:    x
+[DRV] a:48181, b:    x
+[MON] a:48181, b:48181
+[SCB] a:48181, b:48181
+  --> SAME!!! a:48181, b:48181
+[GEN] a:65291, b:    x
+[DRV] a:65291, b:    x
+[MON] a:65291, b:65291
+[SCB] a:65291, b:65291
+  --> SAME!!! a:65291, b:65291
+[GEN] a: 5848, b:    x
+[DRV] a: 5848, b:    x
+[MON] a: 5848, b: 5848
+[SCB] a: 5848, b: 5848
+  --> SAME!!! a: 5848, b: 5848
+[GEN] a:16429, b:    x
+[DRV] a:16429, b:    x
+[MON] a:16429, b:16429
+[SCB] a:16429, b:16429
+  --> SAME!!! a:16429, b:16429
+[GEN] a:31562, b:    x
+[DRV] a:31562, b:    x
+[MON] a:31562, b:31562
+[SCB] a:31562, b:31562
+  --> SAME!!! a:31562, b:31562
+[GEN] a:46640, b:    x
+[DRV] a:46640, b:    x
+[MON] a:46640, b:46640
+[SCB] a:46640, b:46640
+  --> SAME!!! a:46640, b:46640
+[GEN] a:50273, b:    x
+[DRV] a:50273, b:    x
+[MON] a:50273, b:50273
+[SCB] a:50273, b:50273
+  --> SAME!!! a:50273, b:50273
+===========================================
+==             Final Report              ==
+==           Total Test :          10             ==
+==           Total SAME :          10             ==
+==           Total DIFF :           0             ==
+===========================================
+==        test bench is finished!        ==
+===========================================
+$finish called at time : 205 ns : File "/home/yonn/vivado_project/20240521_16bit_reg_verification/20240521_16bit_reg_verification.srcs/sim_1/new/tb_register.sv" Line 189
