@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240522_RAM_SystemVerilog_Verification/20240522_RAM_SystemVerilog_Verification.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+/home/yonn/vivado_project/20240522_RAM_SystemVerilog_Verification/20240522_RAM_SystemVerilog_Verification.srcs/sim_1/new/tb_RAM.sv,1716363940,systemVerilog,,,,$unit_tb_RAM_sv;ram_interface;tb_RAM,,uvm,,,,,,
+/home/yonn/vivado_project/20240522_RAM_SystemVerilog_Verification/20240522_RAM_SystemVerilog_Verification.srcs/sources_1/new/RAM.v,1716360723,verilog,,,,RAM,,uvm,,,,,,
