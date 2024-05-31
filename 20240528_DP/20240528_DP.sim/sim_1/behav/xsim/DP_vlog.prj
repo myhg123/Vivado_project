@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../20240528_DP.srcs/sources_1/new/controlUnit.v" \
+"../../../../20240528_DP.srcs/sources_1/new/dataPath.v" \
+"../../../../20240528_DP.srcs/sources_1/imports/new/fndController.v" \
+"../../../../20240528_DP.srcs/sources_1/new/DP.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

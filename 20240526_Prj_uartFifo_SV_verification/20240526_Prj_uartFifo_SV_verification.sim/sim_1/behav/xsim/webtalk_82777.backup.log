@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 26 17:18:34 2024
+# Process ID: 82777
+# Current directory: /home/yonn/vivado_project/20240526_Prj_uartFifo_SV_verification/20240526_Prj_uartFifo_SV_verification.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/yonn/vivado_project/20240526_Prj_uartFifo_SV_verification/20240526_Prj_uartFifo_SV_verification.sim/sim_1/behav/xsim/xsim.dir/tb_uartFifo_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/yonn/vivado_project/20240526_Prj_uartFifo_SV_verification/20240526_Prj_uartFifo_SV_verification.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/yonn/vivado_project/20240526_Prj_uartFifo_SV_verification/20240526_Prj_uartFifo_SV_verification.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/yonn/vivado_project/20240526_Prj_uartFifo_SV_verification/20240526_Prj_uartFifo_SV_verification.sim/sim_1/behav/xsim/xsim.dir/tb_uartFifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun May 26 17:18:35 2024...

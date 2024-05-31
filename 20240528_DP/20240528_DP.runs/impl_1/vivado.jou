@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 28 16:50:54 2024
+# Process ID: 211748
+# Current directory: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/impl_1
+# Command line: vivado -log DP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DP.tcl -notrace
+# Log file: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/impl_1/DP.vdi
+# Journal file: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source DP.tcl -notrace

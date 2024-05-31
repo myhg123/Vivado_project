@@ -1,0 +1,12 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+[GEN] rx_data =  47, tx_data =   x 
+[DRV] rx_data =  47, tx_data =   x 
+[MON] rx_data =   x, tx_data =  47 
+[SCB] Random Data =  47, Dut Tx Data =  47
+  --> PASS!!!
+[GEN] rx_data =  24, tx_data =   x 
+[MON] rx_data =   x, tx_data = 255 
+[SCB] Random Data =  24, Dut Tx Data = 255
+  --> FAIL!!!
+[GEN] rx_data =  53, tx_data =   x 

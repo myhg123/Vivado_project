@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240528_DP/20240528_DP.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sim_1/new/tb_processor.v,1716881273,verilog,,,,tb_processor,,,,,,,,
+/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v,1715998248,verilog,,/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sim_1/new/tb_processor.v,,BCDtoSEG;clkDiv;counter;decoder;digitSplitter;fndController;mux,,,,,,,,
+/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/DP.v,1716884906,verilog,,/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/controlUnit.v,,DP,,,,,,,,
+/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/controlUnit.v,1716882600,verilog,,/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v,,controlUnit,,,,,,,,
+/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v,1716882087,verilog,,/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v,,adder;comparator;dataPath;mux_2x1;outBuff;register,,,,,,,,

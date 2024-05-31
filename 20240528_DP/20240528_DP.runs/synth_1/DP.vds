@@ -1,0 +1,279 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 28 16:50:22 2024
+# Process ID: 211505
+# Current directory: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/synth_1
+# Command line: vivado -log DP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DP.tcl
+# Log file: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/synth_1/DP.vds
+# Journal file: /home/yonn/vivado_project/20240528_DP/20240528_DP.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source DP.tcl -notrace
+Command: synth_design -top DP -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 211543
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2357.184 ; gain = 0.000 ; free physical = 147 ; free virtual = 3657
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'DP' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/DP.v:3]
+INFO: [Synth 8-6157] synthesizing module 'controlUnit' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/controlUnit.v:3]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'controlUnit' (1#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/controlUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dataPath' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux_2x1' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2x1' (2#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:76]
+INFO: [Synth 8-6157] synthesizing module 'register' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'register' (3#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:90]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (4#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:111]
+INFO: [Synth 8-6157] synthesizing module 'adder' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:121]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (5#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:121]
+INFO: [Synth 8-6155] done synthesizing module 'dataPath' (6#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/dataPath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fndController' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:143]
+	Parameter MAX_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv' (7#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:143]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:127]
+	Parameter MAX_COUNT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (8#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:127]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (9#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:111]
+INFO: [Synth 8-6157] synthesizing module 'digitSplitter' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'digitSplitter' (10#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:51]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (11#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:64]
+INFO: [Synth 8-6157] synthesizing module 'BCDtoSEG' [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'BCDtoSEG' (12#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'fndController' (13#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/imports/new/fndController.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DP' (14#1) [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/sources_1/new/DP.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2357.184 ; gain = 0.000 ; free physical = 168 ; free virtual = 3652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2357.184 ; gain = 0.000 ; free physical = 854 ; free virtual = 4337
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2357.184 ; gain = 0.000 ; free physical = 854 ; free virtual = 4337
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2357.184 ; gain = 0.000 ; free physical = 905 ; free virtual = 4388
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+Finished Parsing XDC File [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/yonn/vivado_project/20240528_DP/20240528_DP.srcs/constrs_1/imports/vivado_project/MY_Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.215 ; gain = 0.000 ; free physical = 743 ; free virtual = 4226
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.215 ; gain = 0.000 ; free physical = 743 ; free virtual = 4226
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 884 ; free virtual = 4367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 884 ; free virtual = 4367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 885 ; free virtual = 4368
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controlUnit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                           000001 |                              000
+                      S1 |                           000010 |                              001
+                      S2 |                           000100 |                              010
+                      S3 |                           001000 |                              011
+                      S5 |                           010000 |                              101
+                      S4 |                           100000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'controlUnit'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 872 ; free virtual = 4356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 855 ; free virtual = 4342
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 736 ; free virtual = 4223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 734 ; free virtual = 4221
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    20|
+|3     |LUT1   |     5|
+|4     |LUT2   |    23|
+|5     |LUT3   |     6|
+|6     |LUT4   |    16|
+|7     |LUT5   |    51|
+|8     |LUT6   |    30|
+|9     |FDCE   |    61|
+|10    |FDPE   |     1|
+|11    |FDRE   |    21|
+|12    |IBUF   |     2|
+|13    |OBUF   |    20|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 733 ; free virtual = 4220
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2421.215 ; gain = 0.000 ; free physical = 783 ; free virtual = 4270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2421.215 ; gain = 64.031 ; free physical = 783 ; free virtual = 4270
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.215 ; gain = 0.000 ; free physical = 873 ; free virtual = 4360
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.215 ; gain = 0.000 ; free physical = 826 ; free virtual = 4313
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.215 ; gain = 128.812 ; free physical = 886 ; free virtual = 4373
+INFO: [Common 17-1381] The checkpoint '/home/yonn/vivado_project/20240528_DP/20240528_DP.runs/synth_1/DP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DP_utilization_synth.rpt -pb DP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 28 16:50:43 2024...

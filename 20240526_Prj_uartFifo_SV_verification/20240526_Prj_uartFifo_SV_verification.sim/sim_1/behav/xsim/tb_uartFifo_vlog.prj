@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../20240526_Prj_uartFifo_SV_verification.srcs/sources_1/imports/sources_1/imports/new/FIFO.v" \
+"../../../../20240526_Prj_uartFifo_SV_verification.srcs/sources_1/imports/sources_1/new/uart.v" \
+"../../../../20240526_Prj_uartFifo_SV_verification.srcs/sources_1/imports/sources_1/new/uartfifo.v" \
+
+sv xil_defaultlib  \
+"../../../../20240526_Prj_uartFifo_SV_verification.srcs/sim_1/new/tb_uartFifo.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

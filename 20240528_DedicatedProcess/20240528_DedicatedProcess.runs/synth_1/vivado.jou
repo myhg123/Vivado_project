@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 28 15:09:56 2024
+# Process ID: 136725
+# Current directory: /home/yonn/vivado_project/20240528_DedicatedProcess/20240528_DedicatedProcess.runs/synth_1
+# Command line: vivado -log DedicatedProcessor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DedicatedProcessor.tcl
+# Log file: /home/yonn/vivado_project/20240528_DedicatedProcess/20240528_DedicatedProcess.runs/synth_1/DedicatedProcessor.vds
+# Journal file: /home/yonn/vivado_project/20240528_DedicatedProcess/20240528_DedicatedProcess.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source DedicatedProcessor.tcl -notrace

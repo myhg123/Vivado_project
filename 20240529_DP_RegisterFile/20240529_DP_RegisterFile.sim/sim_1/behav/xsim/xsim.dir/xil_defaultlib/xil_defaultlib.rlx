@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sim_1/new/tb_DP.sv,1716963425,systemVerilog,,,,tb_DP,,uvm,,,,,,
+/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sources_1/new/DataPath.sv,1716963874,systemVerilog,,/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sources_1/new/DedicatedProcessor.sv,,DataPath;RegisterFile;adder;comparator;mux_2x1;register,,uvm,,,,,,
+/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sources_1/new/DedicatedProcessor.sv,1716963777,systemVerilog,,/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sources_1/new/controlUnit.sv,,DedicatedProcessor,,uvm,,,,,,
+/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sources_1/new/controlUnit.sv,1716964601,systemVerilog,,/home/yonn/vivado_project/20240529_DP_RegisterFile/20240529_DP_RegisterFile.srcs/sim_1/new/tb_DP.sv,,controlUnit,,uvm,,,,,,
