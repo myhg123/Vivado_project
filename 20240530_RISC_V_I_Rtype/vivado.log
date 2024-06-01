@@ -3158,3 +3158,5 @@ close [ open /home/yonn/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_
 add_files /home/yonn/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.srcs/sources_1/new/Data_RAM.sv
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May 31 20:36:17 2024...

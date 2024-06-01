@@ -2,12 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri May 31 14:31:29 2024
-# Process ID: 113178
+# Start of session at: Sat Jun  1 20:17:12 2024
+# Process ID: 31251
 # Current directory: /home/yonn/vivado_project/20240530_RISC_V_I_Rtype/20240530_RISC_V_Rtype.sim/sim_1/behav/xsim
 # Command line: wbtcv -mode batch -source /home/yonn/vivado_project/20240530_RISC_V_I_Rtype/20240530_RISC_V_Rtype.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/yonn/vivado_project/20240530_RISC_V_I_Rtype/20240530_RISC_V_Rtype.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/yonn/vivado_project/20240530_RISC_V_I_Rtype/20240530_RISC_V_Rtype.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
 source /home/yonn/vivado_project/20240530_RISC_V_I_Rtype/20240530_RISC_V_Rtype.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri May 31 14:31:30 2024...
+INFO: [Common 17-206] Exiting Webtalk at Sat Jun  1 20:17:12 2024...
