@@ -2,23 +2,51 @@
 `include "defines.sv"
 
 module DataPath (
-    input clk,
-    input reset,
-    input [31:0] machineCode,
-    input [3:0] aluControl,
-    input we,
-    output [31:0] instrMemRAddr
-
-
+    input  logic        clk,
+    input  logic        reset,
+    input  logic [31:0] machineCode,
+    input  logic [ 3:0] aluControl,
+    input  logic        regFileWe,
+    output logic [31:0] instrMemRAddr
 );
 
+    logic [31:0] w_aluResult, w_RFRData1, w_RFRData2, w_PC_Data;
 
+    RegisterFile U_RegFile (
+        .clk   (clk),
+        .regFileWe    (regFileWe),
+        .RAddr1(machineCode[19:15]),
+        .RAddr2(machineCode[24:20]),
+        .WAddr (machineCode[11:7]),
+        .WData (w_aluResult),
+        .RData1(w_RFRData1),
+        .RData2(w_RFRData2)
+    );
+
+    ALU U_ALU (
+        .aluControl(aluControl),
+        .a         (w_RFRData1),
+        .b         (w_RFRData2),
+        .Result    (w_aluResult)
+    );
+
+    Register U_PC (
+        .clk  (clk),
+        .reset(reset),
+        .d    (w_PC_Data),
+        .q    (instrMemRAddr)
+    );
+    adder U_PC_adder (
+        .a(32'd4),
+        .b(instrMemRAddr),
+        .y(w_PC_Data)
+    );
 
 endmodule
 
 module RegisterFile (
     input  logic        clk,
-    input  logic        we,
+    input  logic        regFileWe,
     input  logic [ 4:0] RAddr1,
     input  logic [ 4:0] RAddr2,
     input  logic [ 4:0] WAddr,
@@ -37,7 +65,7 @@ module RegisterFile (
         RegFile[5] = 32'd5;
     end
     always_ff @(posedge clk) begin
-        if (we) RegFile[WAddr] <= WData;
+        if (regFileWe) RegFile[WAddr] <= WData;
     end
 
     assign RData1 = (RAddr1 != 0) ? RegFile[RAddr1] : 0;
@@ -101,11 +129,11 @@ module mux_2x1 (
     output logic [31:0] y
 );
 
-    always_comb begin 
+    always_comb begin
         case (sel)
-            1'b0: y=a;
-            1'b1: y=b;
-            default: y= 32'bx;
+            1'b0: y = a;
+            1'b1: y = b;
+            default: y = 32'bx;
         endcase
     end
 

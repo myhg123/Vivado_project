@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jun  2 02:05:02 2024
+# Process ID: 25931
+# Current directory: /home/yoons/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/yoons/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/yoons/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/yoons/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/yoons/vivado_project/20240531_RV32I_CPU_Design/20240531_RV32I_CPU_Design.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,4 +1,3 @@
-
 `define OP_TYPE_R 7'b0110011
 `define OP_TYPE_IL 7'b0000011
 `define OP_TYPE_I 7'b0010011

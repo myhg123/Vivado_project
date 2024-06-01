@@ -1,26 +1,30 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 31.05.2024 18:55:43
-// Design Name: 
-// Module Name: CPU_core
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+module CPU_core (
+    input  logic        clk,
+    input  logic        reset,
+    input  logic [31:0] machineCode,
+    output logic [31:0] instrMemRAddr
+);
 
-module CPU_core(
-
+    logic [3:0] w_aluControl;
+    logic w_regFileWe;
+    ControlUnit U_CU (
+        .op        (machineCode[6:0]),
+        .funct3    (machineCode[14:12]),
+        .funct7    (machineCode[31:25]),
+        .regFileWe (w_regFileWe),
+        .aluControl(w_aluControl)
     );
+
+
+    DataPath U_DP (
+        .clk          (clk),
+        .reset        (reset),
+        .machineCode  (machineCode),
+        .aluControl   (w_aluControl),
+        .regFileWe    (w_regFileWe),
+        .instrMemRAddr(instrMemRAddr)
+    );
+
 endmodule
