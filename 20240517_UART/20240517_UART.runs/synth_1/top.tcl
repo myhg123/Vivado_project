@@ -70,10 +70,14 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+<<<<<<< HEAD
 set_param chipscope.maxJobs 4
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-1132-DESKTOP-7CFQ9ND/incrSyn
+=======
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-676-DESKTOP-7CFQ9ND/incrSyn
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -82,10 +86,15 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+<<<<<<< HEAD
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/yonn/vivado_project/20240517_UART/20240517_UART.cache/wt [current_project]
 set_property parent.project_path /home/yonn/vivado_project/20240517_UART/20240517_UART.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+=======
+set_property webtalk.parent_dir /home/yonn/vivado_project/20240517_UART/20240517_UART.cache/wt [current_project]
+set_property parent.project_path /home/yonn/vivado_project/20240517_UART/20240517_UART.xpr [current_project]
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
@@ -94,6 +103,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+<<<<<<< HEAD
   /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v
   /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/top.v
 }
@@ -103,6 +113,12 @@ set_property used_in_implementation false [get_files -all /home/yonn/vivado_proj
 set_property used_in_implementation false [get_files -all /home/yonn/vivado_project/20240517_UART/20240517_UART.gen/sources_1/ip/ila_0_1/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /home/yonn/vivado_project/20240517_UART/20240517_UART.gen/sources_1/ip/ila_0_1/ila_0_ooc.xdc]
 
+=======
+  /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/imports/new/button.v
+  /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/uart.v
+  /home/yonn/vivado_project/20240517_UART/20240517_UART.srcs/sources_1/new/top.v
+}
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

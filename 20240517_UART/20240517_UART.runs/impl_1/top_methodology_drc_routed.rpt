@@ -1,7 +1,11 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+<<<<<<< HEAD
 | Date         : Sun May 19 15:00:07 2024
+=======
+| Date         : Fri May 17 13:04:17 2024
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 | Host         : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,6 +27,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
+<<<<<<< HEAD
              Violations found: 17
 +-----------+----------+-------------------------------------------------+------------+
 | Rule      | Severity | Description                                     | Violations |
@@ -115,11 +120,29 @@ Related violations: <none>
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on reset relative to clock(s) sys_clk_pin
+=======
+             Violations found: 3
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 3          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on btn_tx_start relative to clock(s) sys_clk_pin
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
+<<<<<<< HEAD
 An input delay is missing on rxd relative to clock(s) sys_clk_pin
+=======
+An input delay is missing on reset relative to clock(s) sys_clk_pin
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 Related violations: <none>
 
 TIMING-18#3 Warning

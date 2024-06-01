@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+<<<<<<< HEAD
 module top (
     input  clk,
     input  reset,
@@ -53,5 +54,31 @@ ila_0 U_ila(
 	.probe4(reset) // input wire [0:0]  probe4
 
 );
+=======
+module top(
+    input clk,
+    input reset,
+    input btn_tx_start,
+    output txd
+    );
+wire w_btn_tx_start;
+button U_BTN_TX(
+    .clk(clk),
+    .in(btn_tx_start),
+    . out(w_btn_tx_start)
+    );
+
+// uart U_UART(
+//     .clk(clk),
+//     .reset(reset),
+//     .tx_start(w_btn_tx_start),
+//     .tx_data(8'h41),
+//     .RX(rxd),
+//     .rx_done(),
+//     .rxdata(),
+//     . tx(txd),
+//     . tx_done()
+// );
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 
 endmodule

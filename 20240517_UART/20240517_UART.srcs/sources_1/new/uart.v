@@ -31,6 +31,7 @@ module uart (
     );
     wire w_br_tick_sig;
     wire w_br_start;
+<<<<<<< HEAD
     baudrate_generator_startSignal U_BR_Gen_sig (
         .clk(clk),
         .startSignal(w_br_start),
@@ -106,6 +107,26 @@ module uart_TX (
         .tx_done(tx_done)
     );
 
+=======
+baudrate_generator_startSignal U_BR_Gen_sig(
+    .clk(clk),
+    .startSignal(w_br_start),
+    .reset(reset),
+    .br_tick(w_br_tick_sig)
+);
+
+
+Receiver U_Receiver(
+    .clk(clk),
+    .RX(RX),
+    .reset(reset),
+    .br_tick(w_br_tick_sig),
+    .RXdata(rx_data),
+    .br_start(w_br_start),
+    . RX_done(rx_done)
+
+);
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 
 endmodule
 
@@ -131,8 +152,13 @@ module baudrate_generator (
 
     always @(*) begin
         counter_next = counter_reg;
+<<<<<<< HEAD
         //if (counter_reg == 10 - 1) begin
         if (counter_reg == 100_000_000 / 9600 - 1) begin
+=======
+        if (counter_reg == 10 - 1) begin
+   //     if (counter_reg == 100_000_000 / 9600 - 1) begin
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
             counter_next = 0;
             tick_next = 1'b1;
         end else begin
@@ -167,18 +193,27 @@ module baudrate_generator_startSignal (
     always @(*) begin
         counter_next = counter_reg;
         if (startSignal) begin
+<<<<<<< HEAD
             //if (counter_reg == 10 - 1) begin
                 if (counter_reg == 100_000_000 / 9600 - 1) begin
+=======
+            if (counter_reg == 10 - 1) begin
+            //if (counter_reg == 100_000_000 / 9600 - 1) begin
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
                 counter_next = 0;
                 tick_next = 1'b1;
             end else begin
                 counter_next = counter_reg + 1;
                 tick_next = 1'b0;
             end
+<<<<<<< HEAD
         end else begin
             counter_next = 0;
             tick_next = 0;
         end
+=======
+        end else counter_next = 0;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
     end
 
 endmodule
@@ -193,7 +228,11 @@ module transmitter (
     output tx_done
 );
 
+<<<<<<< HEAD
     localparam IDLE = 0, START = 1, DATA = 3, STOP = 2;
+=======
+    localparam IDLE = 0, START = 1, DATA = 2, STOP = 3;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 
     reg [1:0] state, state_next;
     reg [7:0] tx_data_reg, tx_data_next;
@@ -271,11 +310,16 @@ module Receiver (
     input reset,
     input br_tick,
     output [7:0] RXdata,
+<<<<<<< HEAD
     //output br_start,
+=======
+    output br_start,
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
     output RX_done
 
 );
 
+<<<<<<< HEAD
     localparam IDLE = 0, DATA = 1, STOP = 3;
 
     reg [1:0] state, state_next;
@@ -287,10 +331,24 @@ module Receiver (
     assign RXdata  = rx_data_reg;
     assign RX_done = rx_done_reg;
     //    assign br_start = br_start_reg;
+=======
+    localparam IDLE = 0, STARTBIT = 1, DATA = 2, STOP = 3;
+
+    reg [1:0] state, state_next;
+    reg [7:0] rx_reg, rx_reg_next;
+    reg [2:0] bit_cnt_reg, bit_cnt_next;
+    reg rx_done_reg, rx_done_next;
+    reg br_start_reg, br_start_next; 
+    //output
+    assign RX = rx_reg;
+    assign RX_done = rx_done_reg;
+    assign br_start = br_start_reg;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
     //currunt state
     always @(posedge clk, posedge reset) begin
         if (reset) begin
             state <= IDLE;
+<<<<<<< HEAD
             rx_data_reg <= 8'd0;
             bit_cnt_reg <= 3'd0;
             rx_done_reg <= 1'b0;
@@ -301,11 +359,24 @@ module Receiver (
             bit_cnt_reg <= bit_cnt_next;
             rx_done_reg <= rx_done_next;
             //        br_start_reg <= br_start_next;
+=======
+            rx_reg <= 8'd0;
+            bit_cnt_reg <= 3'd0;
+            rx_done_reg <= 1'b0;
+            br_start_reg <= 1'b0;
+        end else begin
+            state <= state_next;
+            rx_reg <= rx_reg_next;
+            bit_cnt_next <= bit_cnt_reg;
+            rx_done_reg <= rx_done_next;
+            br_start_reg <= br_start_next;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
         end
     end
 
     //next state
     always @(*) begin
+<<<<<<< HEAD
         state_next   = state;
         rx_done_next = 0;
         rx_data_next = rx_data_reg;
@@ -323,6 +394,28 @@ module Receiver (
             DATA: begin
                 if (br_tick) begin
                     rx_data_next[bit_cnt_reg] = RX;
+=======
+        state_next = state;
+        rx_done_next = 1'b0;
+        rx_reg_next = rx_reg;
+        bit_cnt_next = bit_cnt_reg;
+        case (state)
+            IDLE: begin
+                bit_cnt_next = 0;
+                rx_done_next = 0;
+                br_start_next = 1'b0;
+                if (RX == 1'b0) begin
+                    state_next = STARTBIT;
+                end
+            end
+            STARTBIT: begin
+                br_start_next = 1'b1;
+                if (br_tick) state_next = DATA;
+            end
+            DATA: begin
+                if (br_tick) begin
+                    rx_reg_next[bit_cnt_next] = RX;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
                     if (bit_cnt_reg == 7) begin
                         state_next = STOP;
                     end else begin
@@ -333,7 +426,11 @@ module Receiver (
             STOP: begin
                 if (br_tick) begin
                     rx_done_next = RX ? 1'b1 : 1'b0;
+<<<<<<< HEAD
                     state_next   = IDLE;
+=======
+                    state_next = IDLE;
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
                 end
             end
         endcase

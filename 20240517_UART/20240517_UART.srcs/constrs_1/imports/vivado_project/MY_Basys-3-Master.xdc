@@ -69,7 +69,11 @@ create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk
 ##Buttons
 
 set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { reset}]; #IO_L18N_T2_A11_D27_14 ,Sch=BTNC
+<<<<<<< HEAD
 #set_property -dict { PACKAGE_PIN T18  IOSTANDARD LVCMOS33 } [get_ports { btn_tx_start}]; #IO_L17N_T2_A13_D29_14 ,Sch=BTNU
+=======
+set_property -dict { PACKAGE_PIN T18  IOSTANDARD LVCMOS33 } [get_ports { btn_tx_start}]; #IO_L17N_T2_A13_D29_14 ,Sch=BTNU
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 #set_property -dict { PACKAGE_PIN W19  IOSTANDARD LVCMOS33 } [get_ports { btnL }]; #IO_L16N_T2_A15_D31_14 ,Sch=BTNL
 #set_property -dict { PACKAGE_PIN T17  IOSTANDARD LVCMOS33 } [get_ports { btnR }]; #IO_L17P_T2_A14_D30_14 ,Sch=BTNR
 #set_property -dict { PACKAGE_PIN U17  IOSTANDARD LVCMOS33 } [get_ports { btnD }]; #IO_L18P_T2_A12_D28_14 ,Sch=BTND
@@ -143,7 +147,11 @@ set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { reset}]
 
 ##USB-RS232 Interface
 
+<<<<<<< HEAD
 set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { rxd }]; #IO_L19P_T3_16      ,Sch=UART_RXD_IN
+=======
+#set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { RsRx }]; #IO_L19P_T3_16      ,Sch=UART_RXD_IN
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 set_property -dict { PACKAGE_PIN A18  IOSTANDARD LVCMOS33 } [get_ports { txd}]; #IO_L19N_T3_VREF_16 ,Sch=UART_TXD_OUT
 
 

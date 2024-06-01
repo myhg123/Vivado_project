@@ -4,15 +4,24 @@
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
+<<<<<<< HEAD
   <device name="xc7a35t_0" gui_info="dashboard1=hw_ila_1[xc7a35t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a35t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a35t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a35t_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7a35t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/top.ltx"/>
+=======
+  <device name="xc7a35t_0" gui_info=""/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7a35t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/top.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
+<<<<<<< HEAD
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
@@ -334,4 +343,7 @@
       </nets>
     </probe>
   </probeset>
+=======
+  <probeset name="hw project" active="false"/>
+>>>>>>> 31010376d39b32aadad9f9e19a18ab00f82e6334
 </hwsession>
