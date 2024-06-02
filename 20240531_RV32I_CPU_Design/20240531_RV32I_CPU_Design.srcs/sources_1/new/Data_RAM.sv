@@ -1,26 +1,25 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 31.05.2024 18:55:43
-// Design Name: 
-// Module Name: Data_RAM
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+module Data_RAM (
+    input  logic        clk,
+    input  logic        we,
+    input  logic [31:0] addr,
+    input  logic [31:0] wdata,
+    output logic [31:0] rdata
+);
 
-module Data_RAM(
+    logic [31:0] ram[0:63];
+    initial begin
+        int i;
+        for(i=0;i<64;i++) begin
+            ram[i] = i+100;
+        end
+    end
 
-    );
+    assign rdata = ram[addr[31:2]];
+
+    always_ff @( posedge clk ) begin 
+        if(we) ram[addr[31:2]] <= wdata;
+    end
+
 endmodule

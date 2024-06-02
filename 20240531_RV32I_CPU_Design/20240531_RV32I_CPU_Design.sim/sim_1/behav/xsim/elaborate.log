@@ -1,8 +1,26 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /home/yoons/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3089a4e1f1f1459491fb86474e03ae05 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_RV32I_behav xil_defaultlib.tb_RV32I xil_defaultlib.glbl -log elaborate.log 
+Running: /home/yonn/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 3089a4e1f1f1459491fb86474e03ae05 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_RV32I_behav xil_defaultlib.tb_RV32I xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.mux_2x1
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.mux_4x1
+Compiling module xil_defaultlib.extend
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.DataPath
+Compiling module xil_defaultlib.CPU_core
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Data_RAM
+Compiling module xil_defaultlib.RV32I
+Compiling module xil_defaultlib.tb_RV32I
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_behav

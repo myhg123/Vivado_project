@@ -27,3 +27,9 @@
 `define BGE   4'b0101
 `define BLTU  4'b0110
 `define BGEU  4'b0111
+
+`define EXT_TYPE_R	  3'b000
+`define EXT_TYPE_I	  3'b001
+`define EXT_TYPE_S	  3'b010
+`define EXT_TYPE_B	  3'b011
+`define EXT_TYPE_U	  3'b100
