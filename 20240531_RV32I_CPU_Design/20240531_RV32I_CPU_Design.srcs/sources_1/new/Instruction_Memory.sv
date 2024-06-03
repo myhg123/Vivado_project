@@ -42,8 +42,9 @@ module Instruction_Memory (
         rom[32] = 32'h00317663;  // bgeu x2, x3, 12
         rom[33] = 32'h00fffd37;  // lui x26, 4095
         rom[34] = 32'h00003d97;  // auipc x27, 3
-        
-
+        //////////////////////////////////////////////
+        rom[35] = 32'h00c00e6f;  // jal x28, 12
+        rom[38] = 32'h00c00ee7;  // jalr x29, 12(x0)
         
     end
 

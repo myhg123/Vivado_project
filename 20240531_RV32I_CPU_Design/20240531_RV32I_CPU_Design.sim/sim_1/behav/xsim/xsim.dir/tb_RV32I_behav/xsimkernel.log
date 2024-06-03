@@ -1,4 +1,7 @@
-Running: xsim.dir/tb_RV32I_behav/xsimk -simmode gui -wdb tb_RV32I_behav.wdb -simrunnum 0 -socket 54751
+Running: xsim.dir/tb_RV32I_behav/xsimk -simmode gui -wdb tb_RV32I_behav.wdb -simrunnum 0 -socket 45833
 Design successfully loaded
-Design Loading Memory Usage: 33632 KB (Peak: 33752 KB)
+Design Loading Memory Usage: 33640 KB (Peak: 33760 KB)
 Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 119736 KB (Peak: 172908 KB)
+Simulation CPU Usage: 20 ms

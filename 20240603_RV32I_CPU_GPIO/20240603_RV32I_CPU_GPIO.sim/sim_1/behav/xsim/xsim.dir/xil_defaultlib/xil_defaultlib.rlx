@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sim_1/new/tb_RV32I.sv,1717406222,systemVerilog,,,,tb_RV32I,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv,1717393285,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv,,BUS_interconntor;decoder;mux,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv,1717403680,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv,,CPU_core,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv,1717404881,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/defines.sv,ControlUnit,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv,1717404273,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/defines.sv,ALU;DataPath;Register;RegisterFile;adder;extend;mux_2x1;mux_4x1,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv,1717405642,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/GPO.sv,,Data_RAM,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/GPO.sv,1717393285,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv,,GPO,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv,1717405945,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv,,Instruction_Memory,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv,1717406070,systemVerilog,,/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sim_1/new/tb_RV32I.sv,,RV32I,,uvm,,,,,,
+/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/defines.sv,1717376150,verilog,,,,,,,,,,,,

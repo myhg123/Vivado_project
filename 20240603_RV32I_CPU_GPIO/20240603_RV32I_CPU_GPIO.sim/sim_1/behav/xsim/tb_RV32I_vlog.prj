@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/GPO.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sim_1/new/tb_RV32I.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

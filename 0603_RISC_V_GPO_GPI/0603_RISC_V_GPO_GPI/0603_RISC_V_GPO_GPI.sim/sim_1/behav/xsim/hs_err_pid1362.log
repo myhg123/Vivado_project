@@ -1,0 +1,13 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/home/yonn/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xc04c3b) [0x7f45d929fc3b]
+/home/yonn/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/lib//server/libjvm.so(JVM_handle_linux_signal+0x14e) [0x7f45d92a48de]
+/home/yonn/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xbfd538) [0x7f45d9298538]
+/lib/x86_64-linux-gnu/libc.so.6(+0x43090) [0x7f462e473090]
+/home/yonn/Xilinx/Vivado/2020.2/lib/lnx64.o/librdi_labtools.so(std::_Rb_tree<XHWName, std::pair<XHWName const, XHWProperty>, std::_Select1st<std::pair<XHWName const, XHWProperty> >, std::less<XHWName>, std::allocator<std::pair<XHWName const, XHWProperty> > >::find(XHWName const&)+0xe) [0x7f45e1f06abe]
+/home/yonn/Xilinx/Vivado/2020.2/lib/lnx64.o/librdi_xicom_hw.so(XHWDevice::getIsProgrammable() const+0x3e) [0x7f45dd65ae9e]
+/home/yonn/Xilinx/Vivado/2020.2/lib/lnx64.o/librdi_labtools.so(LTDHWDevice::getStatus[abi:cxx11]() const+0x2c) [0x7f45e1fd945c]
+/home/yonn/Xilinx/Vivado/2020.2/lib/lnx64.o/librdi_labtools.so(Java_ui_data_labtools_lthwdatai_HWDevice_1getStatus+0x40) [0x7f45e22f5330]
+[0x7f45c97de8f4]
