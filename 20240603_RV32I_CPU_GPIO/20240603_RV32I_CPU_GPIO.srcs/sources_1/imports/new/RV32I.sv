@@ -16,7 +16,14 @@ module RV32I (
         w_GpoRData;
     logic [2:0] w_slave_sel;
     logic w_We;
+    // logic w_o_clk;
 
+    // clkDiv #(
+    //     .MAX_COUNT(10)
+    // ) U_Prescaler (
+    //     .clk  (clk),
+    //     .o_clk(w_o_clk)
+    // );
     CPU_core U_CPU_core (
         .clk          (clk),
         .reset        (reset),
@@ -60,5 +67,28 @@ module RV32I (
         .outPort(outPortA)
     );
 
+
+endmodule
+
+module clkDiv #(
+    parameter MAX_COUNT = 100
+) (
+    input  clk,
+    output o_clk
+);
+    reg [$clog2(MAX_COUNT)-1:0] counter = 0;
+    reg r_tick = 0;
+
+    assign o_clk = r_tick;
+
+    always @(posedge clk) begin
+        if (counter == (MAX_COUNT - 1)) begin
+            counter <= 0;
+            r_tick  <= 1'b1;
+        end else begin
+            counter <= counter + 1;
+            r_tick  <= 1'b0;
+        end
+    end
 
 endmodule

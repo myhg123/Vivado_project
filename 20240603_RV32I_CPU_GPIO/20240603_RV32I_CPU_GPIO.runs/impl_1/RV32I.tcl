@@ -125,9 +125,10 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-222543-DESKTOP-7CFQ9ND/incrSyn
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-1092-DESKTOP-7CFQ9ND/incrSyn
 OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7k70tfbv676-1
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
@@ -144,7 +145,7 @@ OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top RV32I -part xc7k70tfbv676-1
+  link_design -top RV32I -part xc7a35tcpg236-1
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }

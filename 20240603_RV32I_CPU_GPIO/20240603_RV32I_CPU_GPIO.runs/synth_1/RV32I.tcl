@@ -70,12 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-222543-DESKTOP-7CFQ9ND/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-1092-DESKTOP-7CFQ9ND/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7k70tfbv676-1
+create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -84,6 +83,7 @@ set_property webtalk.parent_dir /home/yonn/vivado_project/20240603_RV32I_CPU_GPI
 set_property parent.project_path /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
 set_property ip_output_repo /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -116,7 +116,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top RV32I -part xc7k70tfbv676-1
+synth_design -top RV32I -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

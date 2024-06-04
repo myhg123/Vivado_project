@@ -15,6 +15,9 @@ module CPU_core (
     logic [2:0] w_extType;
     logic w_regFileWe, w_aluSrcMuxSel, w_branch, w_aluSrcPCMuxSel,w_JalPCMuxSel;
     logic [1:0]  w_RFWDataSrcMuxSel;
+
+
+
     ControlUnit U_CU (
         .op           (machineCode[6:0]),
         .funct3       (machineCode[14:12]),
