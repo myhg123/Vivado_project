@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Tue Jun  4 09:19:09 2024
+| Date         : Wed Jun  5 19:50:14 2024
 | Host         : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_drc -file RV32I_drc_routed.rpt -pb RV32I_drc_routed.pb -rpx RV32I_drc_routed.rpx
 | Design       : RV32I
@@ -24,12 +24,21 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 1
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| RTSTAT-10 | Warning  | No routable loads | 1          |
++-----------+----------+-------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+RTSTAT-10#1 Warning
+No routable loads  
+4 net(s) have no routable loads. The problem bus(es) and/or net(s) are U_CPU_core/U_DP/U_PC/q[0]_i_4_n_0_repN,
+U_CPU_core/U_DP/U_PC/q[0]_i_5_n_0_repN,
+U_CPU_core/U_DP/U_PC/q_reg[6]_4_repN_2
+U_CPU_core/U_DP/U_PC/q_reg[6]_4_repN_3.
+Related violations: <none>
+
 

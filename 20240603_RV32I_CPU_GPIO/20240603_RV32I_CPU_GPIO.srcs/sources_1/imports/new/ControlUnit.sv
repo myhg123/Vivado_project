@@ -23,8 +23,8 @@ module ControlUnit (
     always_comb begin : main_decoder
         case (op)
             `OP_TYPE_R:  controls = 11'b1_0_00_0_xxx_0_0_0;
-            `OP_TYPE_IL: controls = 11'b1_0_01_0_000_0_0_0;
-            `OP_TYPE_I:  begin if(funct7[5] && (funct3[2:0]==3'b101))controls = 11'b1_1_00_0_001_0_0_0;
+            `OP_TYPE_IL: controls = 11'b1_1_01_0_000_0_0_0;
+            `OP_TYPE_I:  begin if(funct7[5] && (funct3==3'b101))controls = 11'b1_1_00_0_001_0_0_0;
                 else controls = 11'b1_1_00_0_000_0_0_0;
             end
             `OP_TYPE_S:  controls = 11'b0_1_xx_1_010_0_0_0;
@@ -41,7 +41,10 @@ module ControlUnit (
         case (op)
             `OP_TYPE_R:  aluControl = {funct7[5], funct3};
             `OP_TYPE_IL: aluControl = {1'b0, 3'b000};
-            `OP_TYPE_I:  aluControl = {funct7[5], funct3};
+            `OP_TYPE_I: begin
+                if(funct7[5] && (funct3==3'b101)) aluControl = {funct7[5], funct3};
+                else aluControl = {1'b0, funct3};
+            end
             `OP_TYPE_S:  aluControl = {1'b0, 3'b000};
             `OP_TYPE_B:  aluControl = {1'b0, funct3};
             `OP_TYPE_U:  aluControl = {1'b0, 3'b000};

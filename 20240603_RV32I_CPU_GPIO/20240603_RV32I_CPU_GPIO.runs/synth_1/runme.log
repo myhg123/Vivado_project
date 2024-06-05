@@ -16,63 +16,63 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5240
+INFO: [Synth 8-7075] Helper process launched with PID 256163
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2357.234 ; gain = 0.000 ; free physical = 2027 ; free virtual = 5875
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2333.184 ; gain = 0.000 ; free physical = 999 ; free virtual = 5094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'RV32I' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'clkDiv' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv:73]
-	Parameter MAX_COUNT bound to: 10 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clkDiv' (1#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv:73]
 INFO: [Synth 8-6157] synthesizing module 'CPU_core' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (2#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/ControlUnit.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'DataPath' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:122]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (3#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (2#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:122]
 INFO: [Synth 8-6157] synthesizing module 'mux_2x1' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:246]
 INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:254]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2x1' (4#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:246]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2x1' (3#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:246]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:151]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:151]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (4#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:151]
 INFO: [Synth 8-6157] synthesizing module 'mux_4x1' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:263]
 INFO: [Synth 8-226] default block is never used [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:272]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4x1' (6#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:263]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4x1' (5#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:263]
 INFO: [Synth 8-6157] synthesizing module 'extend' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:189]
-INFO: [Synth 8-6155] done synthesizing module 'extend' (7#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:189]
+INFO: [Synth 8-6155] done synthesizing module 'extend' (6#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:189]
 INFO: [Synth 8-6157] synthesizing module 'Register' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:222]
-INFO: [Synth 8-6155] done synthesizing module 'Register' (8#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:222]
+INFO: [Synth 8-6155] done synthesizing module 'Register' (7#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:222]
 INFO: [Synth 8-6157] synthesizing module 'adder' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:236]
-INFO: [Synth 8-6155] done synthesizing module 'adder' (9#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:236]
-INFO: [Synth 8-6155] done synthesizing module 'DataPath' (10#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'CPU_core' (11#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (8#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:236]
+INFO: [Synth 8-6155] done synthesizing module 'DataPath' (9#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/DataPath.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'CPU_core' (10#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'Instruction_Memory' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv:4]
 INFO: [Synth 8-3876] $readmem data file 'inst.mem' is read successfully [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv:49]
-INFO: [Synth 8-6155] done synthesizing module 'Instruction_Memory' (12#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Memory' (11#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'Data_RAM' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (13#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (12#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'BUS_interconntor' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'decoder' (14#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:26]
-INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'mux' (15#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'BUS_interconntor' (16#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'GPO' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/GPO.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'GPO' (17#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/GPO.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (13#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (14#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'BUS_interconntor' (15#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'GPIO_Bus' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'GPIOx' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:124]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:145]
+INFO: [Synth 8-6155] done synthesizing module 'GPIOx' (16#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:124]
+INFO: [Synth 8-6155] done synthesizing module 'GPIO_Bus' (17#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'RV32I' (18#1) [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2357.234 ; gain = 0.000 ; free physical = 1939 ; free virtual = 5788
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2333.184 ; gain = 0.000 ; free physical = 947 ; free virtual = 5042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2357.234 ; gain = 0.000 ; free physical = 2620 ; free virtual = 6468
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2333.184 ; gain = 0.000 ; free physical = 1627 ; free virtual = 5723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2357.234 ; gain = 0.000 ; free physical = 2620 ; free virtual = 6468
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2333.184 ; gain = 0.000 ; free physical = 1627 ; free virtual = 5723
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2357.234 ; gain = 0.000 ; free physical = 2619 ; free virtual = 6467
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2333.184 ; gain = 0.000 ; free physical = 1664 ; free virtual = 5759
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -83,29 +83,30 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/RV32I_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.266 ; gain = 0.000 ; free physical = 2515 ; free virtual = 6362
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2397.215 ; gain = 0.000 ; free physical = 1513 ; free virtual = 5608
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2421.266 ; gain = 0.000 ; free physical = 2515 ; free virtual = 6362
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2397.215 ; gain = 0.000 ; free physical = 1513 ; free virtual = 5608
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2648 ; free virtual = 6495
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1659 ; free virtual = 5755
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2648 ; free virtual = 6495
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1659 ; free virtual = 5755
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2648 ; free virtual = 6495
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1659 ; free virtual = 5755
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'csPort_reg' [/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv:27]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2633 ; free virtual = 6484
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1651 ; free virtual = 5747
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -114,24 +115,22 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 2     
 	   3 Input   32 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               32 Bit    Registers := 13    
 +---RAMs : 
 	               2K Bit	(64 X 32 bit)          RAMs := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 6     
-	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 8     
+	   4 Input   32 Bit        Muxes := 7     
+	  27 Input   32 Bit        Muxes := 1     
 	  10 Input   11 Bit        Muxes := 1     
+	   7 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 1     
 	  10 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
-	   4 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 24    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -148,20 +147,11 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2601 ; free virtual = 6461
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1582 ; free virtual = 5682
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping	Report
-+-------------------+------------+---------------+----------------+
-|Module Name        | RTL Object | Depth x Width | Implemented As | 
-+-------------------+------------+---------------+----------------+
-|Instruction_Memory | p_0_out    | 64x28         | LUT            | 
-|RV32I              | p_0_out    | 64x28         | LUT            | 
-+-------------------+------------+---------------+----------------+
-
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
 +------------+---------------------------------------+-----------+----------------------+----------------+
@@ -179,13 +169,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2482 ; free virtual = 6348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1508 ; free virtual = 5608
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2480 ; free virtual = 6347
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1425 ; free virtual = 5523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -206,7 +196,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2448 ; free virtual = 6315
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1426 ; free virtual = 5523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -224,37 +214,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -271,42 +261,45 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     2|
-|2     |CARRY4   |    42|
-|3     |LUT1     |    26|
-|4     |LUT2     |    46|
-|5     |LUT3     |    36|
-|6     |LUT4     |    98|
-|7     |LUT5     |   233|
-|8     |LUT6     |   446|
+|2     |CARRY4   |    27|
+|3     |LUT1     |   146|
+|4     |LUT2     |   199|
+|5     |LUT3     |    51|
+|6     |LUT4     |   223|
+|7     |LUT5     |   213|
+|8     |LUT6     |   263|
 |9     |RAM32M   |    12|
 |10    |RAM64X1S |    32|
-|11    |FDCE     |    64|
-|12    |FDRE     |     5|
-|13    |IBUF     |     2|
-|14    |OBUF     |     4|
+|11    |FDCE     |   384|
+|12    |FDPE     |    32|
+|13    |LD       |     6|
+|14    |IBUF     |     2|
+|15    |IOBUF    |    32|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2453 ; free virtual = 6320
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1427 ; free virtual = 5525
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2421.266 ; gain = 0.000 ; free physical = 2507 ; free virtual = 6374
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2421.266 ; gain = 64.031 ; free physical = 2507 ; free virtual = 6374
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2397.215 ; gain = 0.000 ; free physical = 1481 ; free virtual = 5579
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2397.215 ; gain = 64.031 ; free physical = 1481 ; free virtual = 5579
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2421.266 ; gain = 0.000 ; free physical = 2592 ; free virtual = 6462
-INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2397.215 ; gain = 0.000 ; free physical = 1574 ; free virtual = 5671
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.266 ; gain = 0.000 ; free physical = 2491 ; free virtual = 6361
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2397.215 ; gain = 0.000 ; free physical = 1522 ; free virtual = 5620
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 44 instances were transformed.
+  A total of 82 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  LD => LDCE (inverted pins: G): 6 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
   RAM64X1S => RAM64X1S (RAMS64E): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2421.266 ; gain = 128.812 ; free physical = 2566 ; free virtual = 6436
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:55 . Memory (MB): peak = 2397.215 ; gain = 104.812 ; free physical = 1590 ; free virtual = 5687
 INFO: [Common 17-1381] The checkpoint '/home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.runs/synth_1/RV32I.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RV32I_utilization_synth.rpt -pb RV32I_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 09:18:35 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 19:49:03 2024...

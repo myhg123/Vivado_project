@@ -9,13 +9,13 @@ module Data_RAM (
     output logic [31:0] rdata
 );
 
-    logic [31:0] ram[0:2**6-1];
-    initial begin
-        int i;
-        for(i=0;i<2**6;i++) begin
-            ram[i] = i+100;
-        end
-    end
+    logic [31:0] ram[0:2**8-1];
+    // initial begin
+    //     int i;
+    //     for(i=0;i<2**6;i++) begin
+    //         ram[i] = i+100;
+    //     end
+    // end
 
     assign rdata = ram[addr[7:2]];
 

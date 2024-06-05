@@ -29,11 +29,10 @@ module decoder (
 );
 
   always_comb begin : decoder
-    case (x[31:8])  //Address
-      24'h0000_10: y = 3'b001;
-      24'h0000_20: y = 3'b010;
-      24'h0000_21: y = 3'b100;
-      default: y = 3'b0;
+    case (x[31:12])  //Address
+      20'h0000_0: y = 3'b001;
+      20'h0000_1: y = 3'b010;
+      default: y = 3'bx;
     endcase
   end
 
@@ -47,10 +46,9 @@ module mux (
     output logic [31:0] y
 );
   always_comb begin : decoder
-    case (sel[31:8])  //Address
-      24'h0000_10: y = a;
-      24'h0000_20: y = b;
-      24'h0000_21: y = c;
+    case (sel[31:12])  //Address
+      20'h0000_0: y = a;
+      20'h0000_1: y = b;
       default: y = 32'bx;
     endcase
   end

@@ -131,14 +131,7 @@ module RegisterFile (
 );
 
     logic [31:0] RegFile[0:31];
-    initial begin
-        RegFile[0] = 32'd0;
-        RegFile[1] = 32'd1;
-        RegFile[2] = 32'd2;
-        RegFile[3] = 32'd3;
-        RegFile[4] = 32'd4;
-        RegFile[5] = 32'd5;
-    end
+
     always_ff @(posedge clk) begin
         if (regFileWe) RegFile[WAddr] <= WData;
     end
@@ -200,7 +193,7 @@ module extend (
             `EXT_TYPE_S: immext = {{21{instr[31]}}, instr[30:25], instr[11:7]};
             `EXT_TYPE_B:
             immext = {
-                {19{instr[31]}}, instr[7], instr[30:25], instr[11:8], 1'b0
+                {20{instr[31]}}, instr[7], instr[30:25], instr[11:8], 1'b0
             };
             `EXT_TYPE_U:
             immext = {instr[31], instr[30:20], instr[19:12], 12'd0};
