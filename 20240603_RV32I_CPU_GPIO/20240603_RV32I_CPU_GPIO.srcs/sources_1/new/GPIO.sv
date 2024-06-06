@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
-module GPIO_Bus (
+
+module GPIO (
     input  logic        clk,
     input  logic        reset,
     input  logic        cs,
@@ -15,40 +16,52 @@ module GPIO_Bus (
     inout  logic [15:0] IOPortH
 );
     logic [5:0] csPort;
-    logic [31:0] w_rDataA,
-     w_rDataB,
-     w_rDataC,
-     w_rDataD,
-     w_rDataE,
-     w_rDataH;
-    always_comb begin  //CS Port
-        if (cs) begin
-            case (addr[11:8])
-                4'h0: csPort = 6'b000001;
-                4'h2: csPort = 6'b000010;
-                4'h4: csPort = 6'b000100;
-                4'h6: csPort = 6'b001000;
-                4'h8: csPort = 6'b010000;
-                4'ha: csPort = 6'b100000;
-                default: csPort = 6'bx;
-            endcase
-        end
-    end
+    logic [31:0] w_rDataA, w_rDataB, w_rDataC, w_rDataD, w_rDataE, w_rDataH;
 
-    always_comb begin
-        rdata = 32'bx;
-        if (cs) begin
-            case (addr[11:8])
-                4'h0: rdata = w_rDataA;
-                4'h2: rdata = w_rDataB;
-                4'h4: rdata = w_rDataC;
-                4'h6: rdata = w_rDataD;
-                4'h8: rdata = w_rDataE;
-                4'ha: rdata = w_rDataH;
-                default: rdata = 32'bx;
-            endcase
-        end
-    end
+    BUS_GPIO U_BUS_GPIO (
+        .address(addr),
+        .ce(cs),
+        .slave_sel(csPort),
+        .slave_rdata1(w_rDataA),
+        .slave_rdata2(w_rDataB),
+        .slave_rdata3(w_rDataC),
+        .slave_rdata4(w_rDataD),
+        .slave_rdata5(w_rDataE),
+        .slave_rdata6(w_rDataH),
+        .master_rdata(rdata)
+    );
+
+
+
+    // always_comb begin  //CS Port
+    // csPort = 6'bx;
+    //     if (cs) begin
+    //         case (addr[11:8])
+    //             4'h0: csPort = 6'b000001;
+    //             4'h2: csPort = 6'b000010;
+    //             4'h4: csPort = 6'b000100;
+    //             4'h6: csPort = 6'b001000;
+    //             4'h8: csPort = 6'b010000;
+    //             4'ha: csPort = 6'b100000;
+    //             default: csPort = 6'bx;
+    //         endcase
+    //     end
+    // end
+
+    // always_comb begin
+    //     rdata = 32'bx;
+    //     if (cs) begin
+    //         case (addr[11:8])
+    //             4'h0: rdata = w_rDataA;
+    //             4'h2: rdata = w_rDataB;
+    //             4'h4: rdata = w_rDataC;
+    //             4'h6: rdata = w_rDataD;
+    //             4'h8: rdata = w_rDataE;
+    //             4'ha: rdata = w_rDataH;
+    //             default: rdata = 32'bx;
+    //         endcase
+    //     end
+    // end
 
     GPIOx GPIOA (
         .clk(clk),
@@ -121,6 +134,92 @@ module GPIO_Bus (
     );
 endmodule
 
+module BUS_GPIO (
+    input logic [11:0] address,
+    input logic ce,
+    output logic [5:0] slave_sel,
+    input logic [31:0] slave_rdata1,
+    input logic [31:0] slave_rdata2,
+    input logic [31:0] slave_rdata3,
+    input logic [31:0] slave_rdata4,
+    input logic [31:0] slave_rdata5,
+    input logic [31:0] slave_rdata6,
+    output logic [31:0] master_rdata
+);
+
+    decoder_GPIO U_Decoder (
+        .x (address),
+        .ce(ce),
+        .y (slave_sel)
+    );
+
+
+    mux_GPIO U_MUX_rdata (
+        .sel(address),
+        .ce (ce),
+        .a  (slave_rdata1),
+        .b  (slave_rdata2),
+        .c  (slave_rdata3),
+        .d  (slave_rdata4),
+        .e  (slave_rdata5),
+        .h  (slave_rdata6),
+        .y  (master_rdata)
+    );
+
+
+endmodule
+
+module decoder_GPIO (
+    input logic [11:0] x,
+    input logic ce,
+    output logic [5:0] y
+);
+
+    always_comb begin : decoder
+        if (ce) begin
+            case (x[11:8])  //Address
+                4'h0: y = 6'b000_001;
+                4'h2: y = 6'b000_010;
+                4'h4: y = 6'b000_100;
+                4'h6: y = 6'b001_000;
+                4'h8: y = 6'b010_000;
+                4'ha: y = 6'b100_000;
+                default: y = 6'b0;
+            endcase
+        end
+    end
+
+endmodule
+
+module mux_GPIO (
+    input logic [11:0] sel,
+    input logic ce,
+    input logic [31:0] a,
+    input logic [31:0] b,
+    input logic [31:0] c,
+    input logic [31:0] d,
+    input logic [31:0] e,
+    input logic [31:0] h,
+    output logic [31:0] y
+);
+    always_comb begin : decoder
+        if (ce) begin
+            case (sel[11:8])  //Address
+                4'h0: y = a;
+                4'h2: y = b;
+                4'h4: y = c;
+                4'h6: y = d;
+                4'h8: y = e;
+                4'ha: y = h;
+                default: y = 32'b0;
+            endcase
+        end
+    end
+
+endmodule
+
+
+
 module GPIOx (
     input  logic        clk,
     input  logic        reset,
@@ -142,9 +241,9 @@ module GPIOx (
             ODR   <= 0;
         end else begin
             if (cs & we) begin
-                case (addr[3:2])
-                    2'b00: MODER <= wdata;  //MODER
-                    2'b01: ODR <= wdata;  //ODR
+                case (addr[3:0])
+                    4'h0: MODER <= wdata;  //MODER
+                    4'h4: ODR <= wdata;  //ODR
                 endcase
             end
         end
@@ -153,10 +252,10 @@ module GPIOx (
     always_comb begin
         rdata = 32'bx;
         if (cs) begin
-            case (addr[3:2])
-                2'b00:   rdata = MODER;  //address 0x00 => 4'b0000
-                2'b01:   rdata = IDR;  //address 0x04 => 4'b0100
-                2'b10:   rdata = ODR;  //address 0x08 => 4'b1000
+            case (addr[3:0])
+                4'h0:   rdata = MODER;
+                4'h4:   rdata = ODR;
+                4'h8:   rdata = IDR;
                 default: rdata = 32'bx;
             endcase
         end

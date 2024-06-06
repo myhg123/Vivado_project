@@ -4,12 +4,12 @@ module tb_RV32I ();
 
     logic        clk;
     logic        reset;
-    wire [15:0] IOPortA;
-    // wire [15:0] IOPortB;
-    wire [15:0] IOPortC;
-    // wire [15:0] IOPortD;
-    // wire [15:0] IOPortE;
-    // wire [15:0] IOPortH;
+    tri   [15:0] IOPortA;
+    // tri [15:0] IOPortB;
+    tri   [15:0] IOPortC;
+    // tri [15:0] IOPortD;
+    // tri [15:0] IOPortE;
+    // tri [15:0] IOPortH;
 
     logic [15:0] ioC;
 
@@ -19,11 +19,11 @@ module tb_RV32I ();
         .clk(clk),
         .reset(reset),
         .IOPortA(IOPortA),
-        // .IOPortB(IOPortB),
+        // .IOPortB(),
         .IOPortC(IOPortC)
-        // .IOPortD(IOPortD),
-        // .IOPortE(IOPortE),
-        // .IOPortH(IOPortH)
+        // .IOPortD(),
+        // .IOPortE(),
+        // .IOPortH()
     );
 
     always #5 clk = ~clk;

@@ -6,7 +6,7 @@ module Instruction_Memory (
     output logic [31:0] data
 );
 
-    logic [31:0] rom[0:63];
+    logic [31:0] rom[0:255];
 
     initial begin
         // rom[0]  = 32'h00520333;  // add x6, x4, x5

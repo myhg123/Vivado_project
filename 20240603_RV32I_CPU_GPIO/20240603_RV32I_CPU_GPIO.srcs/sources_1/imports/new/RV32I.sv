@@ -54,7 +54,7 @@ module RV32I (
         .slave_rdata3(),
         .master_rdata(w_MasterRData)
     );
-    GPIO_Bus U_GPIO (
+    GPIO U_GPIO (
         .clk(clk),
         .reset(reset),
         .cs(w_slave_sel[1]),
@@ -63,16 +63,16 @@ module RV32I (
         .wdata(w_WData),
         .rdata(w_GPIORData),
         .IOPortA(IOPortA),
-        // .IOPortB(IOPortB),
-        .IOPortC(IOPortC),
-        // .IOPortD(IOPortD),
-        // .IOPortE(IOPortE),
-        // .IOPortH(IOPortH)
-
         .IOPortB(),
+        .IOPortC(IOPortC),
         .IOPortD(),
         .IOPortE(),
         .IOPortH()
+
+        // .IOPortB(),
+        // .IOPortD(),
+        // .IOPortE(),
+        // .IOPortH()
     );
 
 

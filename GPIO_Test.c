@@ -52,3 +52,4 @@ int main(){
 		GPIOA->ODR = GPIOC->IDR;
 	}
 }
+
