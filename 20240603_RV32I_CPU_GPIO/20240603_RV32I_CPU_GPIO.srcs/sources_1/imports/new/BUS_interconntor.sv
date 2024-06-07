@@ -35,6 +35,11 @@ module decoder (
                 else y = 3'bx;
             end
             20'h0000_1: y = 3'b010;
+            20'h0000_2: begin
+                if(x[11:8]<4'h4) y = 3'bx;
+                else if(x[11:8]<4'h8) y = 3'b100;
+                else y=3'bx;
+            end
             default: y = 3'bx;
         endcase
     end
@@ -55,6 +60,11 @@ module mux (
                 else y = 32'bx;
             end
             20'h0000_1: y = b;
+            20'h0000_2: begin
+                if(sel[11:8]<4'h4) y=3'bx;
+                else if(sel[11:8] < 4'h8) y = c;
+                else y=3'bx;
+            end
             default: y = 32'bx;
         endcase
     end

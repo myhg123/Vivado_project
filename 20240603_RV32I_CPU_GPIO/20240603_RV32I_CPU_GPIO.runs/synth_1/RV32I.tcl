@@ -71,9 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-256535-DESKTOP-7CFQ9ND/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-1564-DESKTOP-7CFQ9ND/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -101,7 +99,13 @@ read_verilog -library xil_defaultlib -sv {
   /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Data_RAM.sv
   /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv
   /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv
+  /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/new/UART_Bus.sv
   /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv
+}
+read_verilog -library xil_defaultlib {
+  /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/imports/new/FIFO.v
+  /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/new/uart.v
+  /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/new/uartfifo.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

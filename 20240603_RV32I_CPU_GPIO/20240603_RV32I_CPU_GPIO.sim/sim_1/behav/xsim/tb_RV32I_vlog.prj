@@ -1,4 +1,9 @@
 # compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/imports/new/FIFO.v" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/new/uart.v" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/sources_1/new/uartfifo.v" \
+
 sv xil_defaultlib  \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/BUS_interconntor.sv" \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/CPU_core.sv" \
@@ -8,6 +13,7 @@ sv xil_defaultlib  \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/new/GPIO.sv" \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/Instruction_Memory.sv" \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/imports/new/RV32I.sv" \
+"../../../../20240603_RV32I_CPU_GPIO.srcs/sources_1/new/UART_Bus.sv" \
 "../../../../20240603_RV32I_CPU_GPIO.srcs/sim_1/new/tb_RV32I.sv" \
 
 # compile glbl module

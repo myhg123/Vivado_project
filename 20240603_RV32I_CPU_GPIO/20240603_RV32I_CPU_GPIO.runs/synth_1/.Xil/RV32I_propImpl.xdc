@@ -67,3 +67,7 @@ set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN L1   IOSTANDARD LVCMOS33 } [get_ports { IOPortA[15] }]; #IO_L6N_T0_VREF_35            ,Sch=LED15
 set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { reset}]; #IO_L18N_T2_A11_D27_14 ,Sch=BTNC
+set_property src_info {type:XDC file:1 line:146 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { UART_RX1 }]; #IO_L19P_T3_16      ,Sch=UART_RXD_IN
+set_property src_info {type:XDC file:1 line:147 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN A18  IOSTANDARD LVCMOS33 } [get_ports { UART_TX1 }]; #IO_L19N_T3_VREF_16 ,Sch=UART_TXD_OUT

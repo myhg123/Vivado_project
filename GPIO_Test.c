@@ -4,6 +4,17 @@ typedef struct{
 	volatile unsigned int	IDR;
 }GPIO_TypeDef;
 
+typedef struct 
+{
+	volatile unsigned int 	 SR;
+	volatile unsigned int	 RDR;
+	volatile unsigned int	 TDR;
+	volatile unsigned int	 BRR;
+	volatile unsigned int	 CR;
+
+}UART_TypeDef;
+
+
 #define GPIO_BASE		(0x00001000)
 #define GPIOA_BASE		(GPIO_BASE + 0x000)
 #define GPIOB_BASE		(GPIO_BASE + 0x200)
@@ -44,12 +55,29 @@ typedef struct{
 #define GPIOE			((GPIO_TypeDef *)GPIOE_BASE)
 #define GPIOH			((GPIO_TypeDef *)GPIOH_BASE)
 
+#define UART_BASE		(0x00002400)
+#define UART1_BASE		(UART_BASE+0x000)
+#define UART2_BASE		(UART_BASE+0x200)
+
+#define UART1			((UART_TypeDef *)UART1_BASE)
+#define UART2			((UART_TypeDef *)UART2_BASE)
 
 int main(){
 	GPIOA->MODER |= 0xffff;
 	GPIOC->MODER &= 0x0000;
+	UART1->CR	 |= 0b111;
+	UART1->BRR	 |= 0b1;
+	int a=0;
 	while(1){
+		int SR;
+		a++;
 		GPIOA->ODR = GPIOC->IDR;
+		
+		SR = UART1->SR;
+		SR = SR>>1;
+		
+		UART1->TDR = UART1->RDR;
+		
 	}
 }
 

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Thu Jun  6 19:12:42 2024
+| Date         : Fri Jun  7 21:19:19 2024
 | Host         : DESKTOP-7CFQ9ND running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_control_sets -verbose -file RV32I_control_sets_placed.rpt
 | Design       : RV32I
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    16 |
-|    Minimum number of control sets                        |    16 |
+| Total control sets                                       |    43 |
+|    Minimum number of control sets                        |    43 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     2 |
+| Unused register locations in slices containing registers |    54 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    16 |
-| >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     0 |
+| Total control sets |    43 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     0 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     5 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    16 |
+| >= 16              |    25 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           24 |
-| No           | No                    | Yes                    |              32 |            9 |
+| No           | No                    | No                     |              74 |           45 |
+| No           | No                    | Yes                    |              53 |           18 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             384 |          186 |
+| Yes          | No                    | No                     |              64 |           14 |
+| Yes          | No                    | Yes                    |             651 |          225 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,25 +70,52 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  |            Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |                                     | reset_IBUF       |                9 |             32 |         3.56 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/MODER          | reset_IBUF       |               13 |             32 |         2.46 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/p_1_in         |                  |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_13[0] | reset_IBUF       |               18 |             32 |         1.78 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_7[0]  | reset_IBUF       |               13 |             32 |         2.46 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_8[0]  | reset_IBUF       |               12 |             32 |         2.67 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_9[0]  | reset_IBUF       |               18 |             32 |         1.78 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_11[0] | reset_IBUF       |               21 |             32 |         1.52 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/E[0]           | reset_IBUF       |               12 |             32 |         2.67 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_6[0]  | reset_IBUF       |               18 |             32 |         1.78 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_4[0]  | reset_IBUF       |               15 |             32 |         2.13 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_10[0] | reset_IBUF       |               15 |             32 |         2.13 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_5[0]  | reset_IBUF       |               16 |             32 |         2.00 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/q_reg[2]_12    | reset_IBUF       |               15 |             32 |         2.13 |
-|  n_0_1168_BUFG |                                     |                  |               24 |             38 |         1.58 |
-|  clk_IBUF_BUFG | U_CPU_core/U_DP/U_PC/regFileWe      |                  |               12 |             96 |         8.00 |
-+----------------+-------------------------------------+------------------+------------------+----------------+--------------+
++---------------------------+--------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|        Clock Signal       |                                     Enable Signal                                    | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+--------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  tick_next_reg_i_1_n_0    |                                                                                      |                  |                1 |              1 |         1.00 |
+|  tick_next_reg_i_1__0_n_0 |                                                                                      |                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/UART_CR_reg[7]_0[2]                                               | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_uart/U_transmitter/br_cnt_reg[3]_i_1_n_0            | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_uart/U_Receiver/br_cnt_reg[4]_i_1_n_0               | reset_IBUF       |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART2/U_UART_fifo/U_uart/U_Receiver/br_cnt_reg[4]_i_1__0_n_0            | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_uart/U_Receiver/rx_data_reg[7]_i_1_n_0              | reset_IBUF       |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/empty_reg_reg                                                   | reset_IBUF       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_rxfifo/U_fifo_control_unit/wr_ptr_reg[7]_i_1__1_n_0 | reset_IBUF       |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/empty_reg_reg_0                                                 | reset_IBUF       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART2/U_UART_fifo/U_uart/U_Receiver/E[0]                                | reset_IBUF       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_txfifo/U_fifo_control_unit/wr_ptr_reg[7]_i_1_n_0    | reset_IBUF       |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/U_uart/U_transmitter/E[0]                             | reset_IBUF       |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/wr_ptr_reg_reg[7]                                     |                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/full_reg_reg_1                                        |                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/full_reg_reg_0                                        |                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/full_reg_reg                                          |                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG            | U_UART_Bus/U_UART1/U_UART_fifo/wr_ptr_reg_reg[6]                                     |                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/p_1_in                                                          |                  |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_1[0]                                                   | reset_IBUF       |                6 |             32 |         5.33 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_10[0]                                                  | reset_IBUF       |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_12[0]                                                  | reset_IBUF       |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_13[0]                                                  | reset_IBUF       |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_0[0]                                                   |                  |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_14[0]                                                  | reset_IBUF       |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_15[0]                                                  | reset_IBUF       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_11[0]                                                  | reset_IBUF       |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_3[0]                                                   | reset_IBUF       |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_7[0]                                                   | reset_IBUF       |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_2[0]                                                   | reset_IBUF       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_6[0]                                                   | reset_IBUF       |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_5[0]                                                   | reset_IBUF       |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_8[0]                                                   | reset_IBUF       |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_9[0]                                                   | reset_IBUF       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/E[0]                                                            |                  |                6 |             32 |         5.33 |
+|  clk_IBUF_BUFG            | tick_next_reg_i_1_n_0                                                                | reset_IBUF       |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG            | tick_next_reg_i_1__0_n_0                                                             | reset_IBUF       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/q_reg[2]_4                                                      | reset_IBUF       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/MODER                                                           | reset_IBUF       |               10 |             32 |         3.20 |
+|  w_Addr_BUFG[13]          |                                                                                      |                  |               26 |             34 |         1.31 |
+|  w_Addr_BUFG[12]          |                                                                                      |                  |               17 |             38 |         2.24 |
+|  clk_IBUF_BUFG            |                                                                                      | reset_IBUF       |               18 |             53 |         2.94 |
+|  clk_IBUF_BUFG            | U_CPU_core/U_DP/U_PC/regFileWe                                                       |                  |               12 |             96 |         8.00 |
++---------------------------+--------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

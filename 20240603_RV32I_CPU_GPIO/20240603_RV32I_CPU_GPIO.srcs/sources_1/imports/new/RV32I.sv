@@ -3,12 +3,14 @@
 module RV32I (
     input logic clk,
     input logic reset,
-    inout  logic [15:0] IOPortA,
+    inout logic [15:0] IOPortA,
     // inout  logic [15:0] IOPortB,
-    inout  logic [15:0] IOPortC
+    inout logic [15:0] IOPortC,
     // inout  logic [15:0] IOPortD,
     // inout  logic [15:0] IOPortE,
     // inout  logic [15:0] IOPortH
+    input logic UART_RX1,
+    output logic UART_TX1
 );
 
     logic [31:0]
@@ -18,7 +20,8 @@ module RV32I (
         w_MasterRData,
         w_WData,
         w_dataMemRData,
-        w_GPIORData;
+        w_GPIORData,
+        w_UARTRData;
     logic [2:0] w_slave_sel;
     logic w_We;
 
@@ -51,17 +54,17 @@ module RV32I (
         .slave_sel   (w_slave_sel),
         .slave_rdata1(w_dataMemRData),
         .slave_rdata2(w_GPIORData),
-        .slave_rdata3(),
+        .slave_rdata3(w_UARTRData),
         .master_rdata(w_MasterRData)
     );
     GPIO U_GPIO (
-        .clk(clk),
-        .reset(reset),
-        .cs(w_slave_sel[1]),
-        .we(w_We),
-        .addr(w_Addr[11:0]),
-        .wdata(w_WData),
-        .rdata(w_GPIORData),
+        .clk    (clk),
+        .reset  (reset),
+        .cs     (w_slave_sel[1]),
+        .we     (w_We),
+        .addr   (w_Addr[11:0]),
+        .wdata  (w_WData),
+        .rdata  (w_GPIORData),
         .IOPortA(IOPortA),
         .IOPortB(),
         .IOPortC(IOPortC),
@@ -73,6 +76,19 @@ module RV32I (
         // .IOPortD(),
         // .IOPortE(),
         // .IOPortH()
+    );
+    UART_Bus U_UART_Bus (
+        .clk     (clk),
+        .reset   (reset),
+        .cs      (w_slave_sel[2]),
+        .we      (w_We),
+        .addr    (w_Addr[11:0]),
+        .wdata   (w_WData),
+        .rdata   (w_UARTRData),
+        .UART_RX1(UART_RX1),
+        .UART_TX1(UART_TX1),
+        .UART_RX2(),
+        .UART_TX2()
     );
 
 

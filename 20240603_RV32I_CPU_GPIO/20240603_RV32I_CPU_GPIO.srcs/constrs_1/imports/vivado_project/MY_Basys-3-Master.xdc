@@ -143,8 +143,8 @@ set_property -dict { PACKAGE_PIN U18  IOSTANDARD LVCMOS33 } [get_ports { reset}]
 
 ##USB-RS232 Interface
 
-#set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { RsRx }]; #IO_L19P_T3_16      ,Sch=UART_RXD_IN
-#set_property -dict { PACKAGE_PIN A18  IOSTANDARD LVCMOS33 } [get_ports { RsTx }]; #IO_L19N_T3_VREF_16 ,Sch=UART_TXD_OUT
+set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { UART_RX1 }]; #IO_L19P_T3_16      ,Sch=UART_RXD_IN
+set_property -dict { PACKAGE_PIN A18  IOSTANDARD LVCMOS33 } [get_ports { UART_TX1 }]; #IO_L19N_T3_VREF_16 ,Sch=UART_TXD_OUT
 
 
 ##USB HID (PS/2)

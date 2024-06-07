@@ -10,7 +10,8 @@ module tb_RV32I ();
     // tri [15:0] IOPortD;
     // tri [15:0] IOPortE;
     // tri [15:0] IOPortH;
-
+    logic       UART_RX1;
+    logic       UART_TX1;
     logic [15:0] ioC;
 
     assign IOPortC = ioC;
@@ -20,10 +21,12 @@ module tb_RV32I ();
         .reset(reset),
         .IOPortA(IOPortA),
         // .IOPortB(),
-        .IOPortC(IOPortC)
+        .IOPortC(IOPortC),
         // .IOPortD(),
         // .IOPortE(),
         // .IOPortH()
+        .UART_RX1(UART_RX1),
+        .UART_TX1(UART_TX1)
     );
 
     always #5 clk = ~clk;
@@ -31,10 +34,17 @@ module tb_RV32I ();
     initial begin
         clk   = 0;
         reset = 1'b1;
+        UART_RX1 = 1;
         #40 reset = 1'b0;
-        #2000 ioC = 16'b1111000011110000;
-        #2000 ioC = 16'b0000000011111111;
-        #2000 ioC = 16'b1111000011111111;
+        #2000 UART_RX1 = 0;
+        #640  UART_RX1 = 1;
+        #640  UART_RX1 = 0;
+		#640  UART_RX1 = 0;
+        #640  UART_RX1 = 0;
+        #640  UART_RX1 = 0;
+        #640  UART_RX1 = 0;
+        #640  UART_RX1 = 1;
+        #640  UART_RX1 = 1;
     end
 
 

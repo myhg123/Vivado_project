@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Jun  6 19:47:08 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Jun  7 22:06:29 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "a3a9bb9f-c9aa-405d-add4-952c31178250" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "743ec8e014cb41c9b240015611473d6c" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "175" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "195" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Ubuntu 20.04.6 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "12th Gen Intel(R) Core(TM) i7-1260P" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "21 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.04_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "119820_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2308416651 -regid "" -xml /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "119984_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1995609674 -regid "" -xml /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.sim/sim_1/behav/xsim/xsim.dir/tb_RV32I_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

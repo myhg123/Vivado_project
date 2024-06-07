@@ -1,11 +1,8 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[31]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[28]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[27]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[24]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[23]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[20]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                          U_CPU_core/U_DP/U_PC/q_reg[19]/D|
+|              sys_clk_pin |              sys_clk_pin |                                U_UART_Bus/U_UART1/U_UART_fifo/U_rxfifo/U_fifo_control_unit/full_reg_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                               U_UART_Bus/U_UART1/U_UART_fifo/U_rxfifo/U_fifo_control_unit/empty_reg_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                U_UART_Bus/U_UART2/U_UART_fifo/U_rxfifo/U_fifo_control_unit/full_reg_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                               U_UART_Bus/U_UART2/U_UART_fifo/U_rxfifo/U_fifo_control_unit/empty_reg_reg/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

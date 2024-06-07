@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Jun  6 19:12:18 2024
-# Process ID: 349032
+# Start of session at: Fri Jun  7 21:18:52 2024
+# Process ID: 172847
 # Current directory: /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.runs/impl_1
 # Command line: vivado -log RV32I.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RV32I.tcl -notrace
 # Log file: /home/yonn/vivado_project/20240603_RV32I_CPU_GPIO/20240603_RV32I_CPU_GPIO.runs/impl_1/RV32I.vdi
